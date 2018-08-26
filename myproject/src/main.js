@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import "./icon/iconfont.css"
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import "./icon/jquery.js"
+Vue.use(MintUI)
+
 
 Vue.config.productionTip = false
 
