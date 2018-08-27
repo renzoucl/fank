@@ -49,6 +49,7 @@
               
    
           </div>
+          <!-- 前后轮播 -->
           <div id="box">
 			
              <div id="box1" class="card">
@@ -74,7 +75,20 @@
           <div class="toubiao">.------好店好铺美食多 . 缤纷美味更多精彩-------.</div>
           <!-- 左右轮播 -->
          <div id="zuoyou">
-
+            <div class="wrap">
+                <ul class="list">
+                  <li> 1 </li>
+                  <li> 2 </li>
+                  <li> 3 </li>
+                  <li> 4 </li>    
+                </ul>
+                <ul class="list">
+                    <li> 1 </li>
+                    <li> 2 </li>
+                    <li> 3 </li>
+                    <li> 4 </li>  
+                  </ul>
+              </div>
          </div>
          <div class="guanggao">
              <img src="static/w.png">
@@ -121,10 +135,11 @@
         str:"首页",
         msg: ""
       }
-    },
-    created() {
-      window.onload=function(){
-	        	var box=document.getElementById("box");
+    }
+    ,
+    mounted() {
+      this.$emit("toparent",this.str)
+      var box=document.getElementById("box");
 			
 			setInterval(function(){
 
@@ -137,13 +152,7 @@
 
 				
 			},1000)
-			
-		}
-    },
-    mounted() {
-      this.$emit("toparent",this.str)
-      
-    },
+    }
       
   
     
@@ -198,8 +207,8 @@
 		#box2{background: orange;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
 		#box3{background: purple;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
 		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0);opacity: 0.1;width: 90%;}
-		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(70px);opacity: .5;width: 95%}
-		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(130px);opacity: 1;width: 100%} 
+		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px);opacity: .5;width: 95%}
+		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 
     
     #zuoyou{height:100px;background: yellow;margin-top: 10px;box-shadow: 0px 5px 10px #888888;}
     
@@ -221,6 +230,48 @@
     #yingyang .you p:nth-of-type(3){width: 100%;height: 25px;;margin-top: 10px;color: gray;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px}
     #yingyang .you p:nth-of-type(2) span{color: #72cc8f;font-size: 20px}
     #yingyang .you p:nth-of-type(3) span{color: #72cc8f;font-size: 16px}
+
+    .wrap {
+	overflow:hidden;
+	width:100%;
+	height:100px;
+	border:1px solid #000;
+  display: flex;justify-content: space-between
+	
+}
+.list {
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:1px solid #f00;
+	list-style:none;
+	animation:mymove 5s infinite linear;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between
+}
+.list li {
+	width:120px;
+	height:100px;
+	border:1px solid white;
+	background:blue;
+	float:left;
+	vertical-align:middle;
+	text-align:center;
+	line-height:98px;
+	color:white;
+	font-weight:bold;
+}
+    @-webkit-keyframes mymove {
+      from {
+          left:0px;
+        }
+        to {
+          left:-100%;
+        }
+    }
 	</style>
   
   

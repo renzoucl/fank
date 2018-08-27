@@ -11,8 +11,6 @@ import Pub from "../components/pub.vue"
 
 Vue.use(Router)
 
-
-
 //路由页面
 export default new Router({
   routes: [
@@ -35,34 +33,34 @@ export default new Router({
       path:"/shequ",
       component:Shequ
     },
-    {
-      path:"/pub",
-      component:Pub,
-          children:[
-          {
-            path:"/home",
-            component:Home
-          },
-          {
-            path:"/shequ",
-            component:Shequ
-          },
-          {
-            path:"/ying",
-            component:Ying
-          },
-          {
-            path:"/mine",
-            component:Mine
-          },
-          {
-            path:"/dian",
-            component:Dian
-          }
-        ]
+    // {
+    //   path:"/pub",
+    //   component:Pub,
+    //       children:[
+    //       {
+    //         path:"/home",
+    //         component:Home
+    //       },
+    //       {
+    //         path:"/shequ",
+    //         component:Shequ
+    //       },
+    //       {
+    //         path:"/ying",
+    //         component:Ying
+    //       },
+    //       {
+    //         path:"/mine",
+    //         component:Mine
+    //       },
+    //       {
+    //         path:"/dian",
+    //         component:Dian
+    //       }
+    //     ]
           
           
-    },
+    // },
 
 
     {
