@@ -11,7 +11,7 @@
              <p><span class="iconfont icon-shouye1"></span>美食店铺</p>
              <p>MORE+</p>
           </div>
-          <div class="toubiao">.------好店好铺美食多 . 缤纷美味更多精彩-------.</div>
+          <div class="toubiao">------好店好铺美食多 . 缤纷美味更多精彩-------</div>
       <!-- 美食 -->
           <div id="meishi">
               <div class="mei">
@@ -72,21 +72,21 @@
               <p>MORE+</p>
             </div>
           </div>
-          <div class="toubiao">.------好店好铺美食多 . 缤纷美味更多精彩-------.</div>
+          <div class="toubiao">------好店好铺美食多 . 缤纷美味更多精彩-------</div>
           <!-- 左右轮播 -->
          <div id="zuoyou">
             <div class="wrap">
                 <ul class="list">
-                  <li> 1 </li>
-                  <li> 2 </li>
-                  <li> 3 </li>
-                  <li> 4 </li>    
+                  <li><img src="static/shi.jpg"></li>
+                  <li><img src="static/shi.jpg"> </li>
+                  <li><img src="static/shi.jpg"></li>
+                    
                 </ul>
                 <ul class="list">
-                    <li> 1 </li>
-                    <li> 2 </li>
-                    <li> 3 </li>
-                    <li> 4 </li>  
+                    <li><img src="static/shi.jpg"></li>
+                    <li><img src="static/shi.jpg"> </li>
+                    <li><img src="static/shi.jpg"></li>
+                   
                   </ul>
               </div>
          </div>
@@ -105,7 +105,7 @@
         <div id="yingyang">
            <div class="content">
                 <div class="zuo">
-                    <div class="shang"></div>
+                    <div class="shang"><img src="static/222.jpg"></div>
                     <p>特朗普</p>
                     <p><span class="iconfont icon-dizhi"></span>美国.华盛顿特区.白宫</p>
                 </div>
@@ -123,10 +123,7 @@
   </template>
   
   <script>
-    // var bw = (document.documentElement.clientWidth/6.4)+"px";        
-    //            var htmlTag = document.getElementsByTagName("html")[0];        
-    //            htmlTag.style.fontSize=bw; 
-    //          var classid = location.search.split("=")[1];
+   
 
   export default {
     name: 'Home',
@@ -179,7 +176,7 @@
       .toubiao{color: #fff;font-size: 14px;line-height: 30px;text-align: center;height: 30px;background: #fe6815;margin-top: 5px;border-top-left-radius: 8px;border-top-right-radius: 8px; }
     
       #meishi{height: 200px;;margin-top:10px;border-radius: 10px;display: flex;justify-content: space-between;}
-      #meishi .mei{height: 200px;width: 32%;;border-radius: 10px;border: 1px solid gray;box-shadow: 0px 5px 10px #888888;}
+      #meishi .mei{height: 200px;width: 32%;;border-radius: 10px;border: 1px solid gray;box-shadow: 0px 5px 10px #ddd;}
       #meishi .mei .shang{height:100px;border-top-left-radius:10px;border-top-right-radius:10px;}
       #meishi .mei .shang img{height:100px;border-top-left-radius:10px;border-top-right-radius:10px;width: 100%}
       #meishi .mei .sun{height:25px;font-size: 14px;font-weight: bold;color: #696969;padding-left:5px;border-bottom: 1px solid gray;line-height: 25px;display: flex;justify-content: space-between}
@@ -203,14 +200,14 @@
     #box{height: 200px;position: relative;}
   	#box>div{height: 100%;width: 100%;text-align: center;position: absolute;transition: all 1s;}
     #box span{font-size: 60px;font-weight: bold;}
-		#box1{background: greenyellow;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
-		#box2{background: orange;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
-		#box3{background: purple;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
-		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0);opacity: 0.1;width: 90%;}
-		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px);opacity: .5;width: 95%}
+		#box1{background: greenyellow;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box2{background: orange;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box3{background: purple;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0) translatex(15%);opacity: 0.1;width: 70%;}
+		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px) translatex(5%);opacity: .5;width: 85%}
 		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 
     
-    #zuoyou{height:100px;background: yellow;margin-top: 10px;box-shadow: 0px 5px 10px #888888;}
+    
     
 
     .guanggao{height: 50px;margin-top: 10px}
@@ -219,7 +216,8 @@
     #yingyang{min-height: 200px;height: auto!important;margin-top: 5px;}
     #yingyang .content{height: 180px;display: flex;justify-content: space-between;border-left: 5px solid orange;border-radius: 10px;box-shadow: 0px 5px 10px #888888;}
     #yingyang .zuo{width: 30%;border-radius: 10px;padding-top: 10px}
-    #yingyang .zuo .shang{width: 100%;height: 100px;background: yellow;border-radius: 50%}
+    #yingyang .zuo .shang{width: 100px;height: 100px;border-radius: 50%;margin: 0 auto}
+    #yingyang .zuo .shang img{width: 100px;height: 100px;border-radius: 50%}
     #yingyang .zuo p:nth-of-type(1){width: 100%;height: 20px;margin-top: 5px;text-align: center;line-height: 30px;font-weight: bold;font-size: 14px}
     #yingyang .zuo p:nth-of-type(2){width: 100%;height: 25px;margin-top: 5px;text-align: left;line-height: 30px;font-weight: bold;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-left: 5px;font-size: 14px}
    
@@ -231,39 +229,40 @@
     #yingyang .you p:nth-of-type(2) span{color: #72cc8f;font-size: 20px}
     #yingyang .you p:nth-of-type(3) span{color: #72cc8f;font-size: 16px}
 
-    .wrap {
-	overflow:hidden;
-	width:100%;
-	height:100px;
-	border:1px solid #000;
-  display: flex;justify-content: space-between
-	
-}
-.list {
-	position:relative;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	border:1px solid #f00;
-	list-style:none;
-	animation:mymove 5s infinite linear;
-  border: 1px solid red;
-  display: flex;
-  justify-content: space-between
-}
-.list li {
-	width:120px;
-	height:100px;
-	border:1px solid white;
-	background:blue;
-	float:left;
-	vertical-align:middle;
-	text-align:center;
-	line-height:98px;
-	color:white;
-	font-weight:bold;
-}
+/* 左右轮播 */
+    #zuoyou{height:100px;margin-top: 10px;}
+    #zuoyou .wrap {
+      overflow:hidden;
+      width:100%;
+      height:100px;
+      
+      display: flex;justify-content: space-between
+      
+    }
+    #zuoyou .list {
+      position:relative;
+      top:0px;
+      left:0px;
+      width:100%;
+      height:100%;
+      
+      list-style:none;
+      animation:mymove 8s infinite linear;
+      
+      display: flex;
+      justify-content: space-between;
+      margin: 0 3px;padding: 0
+    }
+    #zuoyou .list li {
+      box-shadow: 0px 0px 10px #ddd;
+      width:120px;
+      height:100px;   
+      float:left;
+      margin: 0 1px;
+      border-radius:10px;
+    }
+    #zuoyou .list li img{width:120px;height:100px;border-radius:10px;}
+
     @-webkit-keyframes mymove {
       from {
           left:0px;

@@ -374,8 +374,8 @@ div.content1>div:nth-of-type(4) {
 #daren {
 	overflow:hidden;
 	width:100%;
-	height:150px;
-	border:1px solid #000;
+	height:155px;
+	
   display: flex;justify-content: space-between
 	
 }
@@ -385,10 +385,10 @@ div.content1>div:nth-of-type(4) {
 	left:0px;
 	width:100%;
 	height:100%;
-	border:1px solid #f00;
+	
 	list-style:none;
 	animation:mymove 5s infinite linear;
-  border: 1px solid red;
+  
   display: flex;
   justify-content: space-between
 }
@@ -428,7 +428,7 @@ div.content1>div:nth-of-type(4) {
 	overflow:hidden;
 	width:100%;
 	height:140px;
-	border:1px solid #000;
+	
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px
@@ -441,10 +441,10 @@ div.content1>div:nth-of-type(4) {
 	left:0px;
 	width:100%;
 	height:100%;
-	border:1px solid #f00;
+	
 	list-style:none;
 	animation:mymove1 7s infinite linear;
-  border: 1px solid red;
+  
   display: flex;
   justify-content: space-between
 }
@@ -483,7 +483,7 @@ div.content1>div:nth-of-type(4) {
 	overflow:hidden;
 	width:100%;
 	height:120px;
-	border:1px solid #000;
+	
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px
@@ -496,10 +496,10 @@ div.content1>div:nth-of-type(4) {
 	left:0px;
 	width:100%;
 	height:100%;
-	border:1px solid #f00;
+	
 	list-style:none;
 	animation:mymove2 6s infinite linear;
-  border: 1px solid red;
+  
   display: flex;
   justify-content: space-between
 }
@@ -543,8 +543,8 @@ div.content1>div:nth-of-type(4) {
 		#box1{background: greenyellow;border-radius: 10px;}
 		#box2{background: orange;border-radius: 10px;}
 		#box3{background: pink;border-radius: 10px;}
-		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0);opacity: 0.1;width: 90%;}
-		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px);opacity: .5;width: 95%}
+		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0) translatex(15%);opacity: 0.1;width: 70%;}
+		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px) translatex(5%);opacity: .5;width: 85%}
 		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 
 
     #shequcon{min-height: 200px;height: auto!important;} 
@@ -567,7 +567,11 @@ div.content1>div:nth-of-type(4) {
 #pinglun>li p span{color: orange;margin: 0 5px}
 #pinglun>li>div{min-height: 20px;height: auto!important;font-size: 16px;font-weight: bold;color: #555;margin: 10px 0}
 #pinglun>li .pingtu{display: flex;justify-content: space-between;margin-top: 10px;}
+
+
 #pinglun>li .pingtu li{width: 100px;height: 50px;border: 1px solid red;margin: 0;padding: 0;border-radius: 5px;margin-right: 2px}
+#pinglun>li .pingtu li img{width: 100px;height: 50px;}
+
 #pinglun>li .touxiang{width: 60px;height: 80px;border: 1px solid #000;box-shadow: 0 2px 10px gray;border-radius: 50%;position:absolute;top: -5px;left: -5px}
 #pinglun>li .touxiang img{width: 60px;height: 60px;border-radius: 50%}
 #pinglun>li .xiaoxi{height: 100px;width: 100%;border-top: 1px solid gray;display: flex;justify-content: space-between}
