@@ -254,7 +254,7 @@
       margin: 0 3px;padding: 0
     }
     #zuoyou .list li {
-      box-shadow: 0px 0px 10px #ddd;
+      box-shadow: 0px 0px 10px #888888;
       width:120px;
       height:100px;   
       float:left;

@@ -7,6 +7,8 @@ import Ying from "../components/ying.vue"
 import Shequ from "../components/shequ.vue"
 import Mine from "../components/mine.vue"
 import Pub from "../components/pub.vue"
+import Myshequ from "../components/myshequ.vue"
+import Friendshome from "../components/friendshome.vue"
 
 
 Vue.use(Router)
@@ -14,59 +16,64 @@ Vue.use(Router)
 //路由页面
 export default new Router({
   routes: [
-    {
-      path:"/home",
-      component:Home
-    },
-    {
-      path:"/dian",
-      component:Dian
-    },
-    {
-      path:"/ying",
-      component:Ying
-    },{
-      path:"/mine",
-      component:Mine
-    },
-    {
-      path:"/shequ",
-      component:Shequ
-    },
     // {
-    //   path:"/pub",
-    //   component:Pub,
-    //       children:[
-    //       {
-    //         path:"/home",
-    //         component:Home
-    //       },
-    //       {
-    //         path:"/shequ",
-    //         component:Shequ
-    //       },
-    //       {
-    //         path:"/ying",
-    //         component:Ying
-    //       },
-    //       {
-    //         path:"/mine",
-    //         component:Mine
-    //       },
-    //       {
-    //         path:"/dian",
-    //         component:Dian
-    //       }
-    //     ]
-          
-          
+    //   path:"/home",
+    //   component:Home
     // },
-
-
+    // {
+    //   path:"/dian",
+    //   component:Dian
+    // },
+    // {
+    //   path:"/ying",
+    //   component:Ying
+    // },{
+    //   path:"/mine",
+    //   component:Mine
+    // },
+     {
+      path:"/myshequ",
+      component:Myshequ
+    },
     {
-      path:"/",
-      redirect:"/home"
-    }
+      path:"/friendshome",
+      component:Friendshome
+    },
+    
+    {
+      path:"/pub",
+      component:Pub,
+          children:[
+          {
+            path:"/home",
+            component:Home
+          },
+          {
+            path:"/shequ",
+            component:Shequ
+          },
+          {
+            path:"/ying",
+            component:Ying
+          },
+          {
+            path:"/mine",
+            component:Mine
+          },
+          {
+            path:"/dian",
+            component:Dian
+          }
+        ]
+          
+          
+    },
+
+
+    // {
+    //   path:"/",
+    //   redirect:"/home"
+    // }
   ]
 })
 
