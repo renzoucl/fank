@@ -9,6 +9,7 @@ import Shequ from "../components/shequ.vue"
 import Mine from "../components/mine.vue"
 import Pub from "../components/pub.vue"
 import Myshequ from "../components/myshequ.vue"
+
 // 聂响
 import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
  import Friendshome from "../components/friendshome.vue"
@@ -17,10 +18,12 @@ import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
  import Lisddxinx from "../components/lisddxinx.vue"
  import Xican from "../components/xican.vue"
  import Ddxinxi from "../components/ddxinxi.vue"
+
 // 邵婷婷
   import Dolist from "../components/dolist.vue"
   import Bankcard from "../components/bankcard.vue"
   import Fooddetail from "../components/fooddetail.vue"
+
 //朱坏印
 import Register from "../components/register.vue"
 import Lr from "../components/lr.vue"
@@ -118,10 +121,7 @@ export default new Router({
 				path:"/chat",
 				component:Chat
 			},
-    {
-      path:"/",
-      redirect:"/index"
-    },
+    
     {
       path:"/djpuzi_yhq",
       component:Djpuzi_cai
