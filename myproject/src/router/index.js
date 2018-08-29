@@ -14,6 +14,7 @@ import Myshequ from "../components/myshequ.vue"
 import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
  import Friendshome from "../components/friendshome.vue"
  import Djpuzi_cai from "../components/djpuzi_cai.vue"
+ import Djpuzi_yin from "../components/djpuzi_yin.vue"
  import Search from "../components/search.vue"
  import Lisddxinx from "../components/lisddxinx.vue"
  import Xican from "../components/xican.vue"
@@ -124,11 +125,15 @@ export default new Router({
     
     {
       path:"/djpuzi_yhq",
-      component:Djpuzi_cai
+      component:Djpuzi_yhq
     },
     {
       path:"/djpuzi_cai",
       component:Djpuzi_cai
+    },
+    {
+      path:"/djpuzi_yin",
+      component:Djpuzi_yin
     },
     {
       path:"/search",

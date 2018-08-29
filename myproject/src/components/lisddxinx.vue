@@ -8,12 +8,13 @@
 	    <div class="snav">
         	<div >
         		<span></span>
-        		<p><span class="iconfont icon-qicheqianlian-"></span><strong>订单信息</strong></p>
+        		<router-link to="/ddxinxi"  tag='p'><span class="iconfont icon-qicheqianlian-"></span><strong>订单信息</strong></router-link>
         		<span></span>
         	</div>
         	<div class="ddxx">
         		<span></span>
-        		<p><span class="iconfont icon-icon"></span><strong>历史订单</strong></p>
+        		<router-link to="/lisddxinx"  tag='p'><span class="iconfont icon-icon"></span><strong>历史订单</strong></router-link>
+        		
         		<span></span>
         			
         	</div>
@@ -54,7 +55,7 @@
         		</div>
         		<div class="lsdd-xx">
         			<div>
-        				<h3>五味粉丝蒸牛肉</h3>
+        				<h3>五味粉丝蒸牛肉五味粉丝蒸牛肉</h3>
         				<p>2018.08.28</p>
         			</div>
         			<p>-￥8：00</p>
@@ -114,7 +115,7 @@
 	.lsdd-pic>img{position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
 	.lsdd-xx{width: 80%;height: 100%;display: flex;}
 	.lsdd-xx>div{width: 70%;padding: 0 10px;}
-	.lsdd-xx>div>h3{font-size: 18px;font-weight: 900;line-height: 40px;}
+	.lsdd-xx>div>h3{font-size: 18px;font-weight: 900;line-height: 40px;width: 160px;white-space: nowrap;overflow: auto;text-overflow: ellipsis;}
 	.lsdd-xx>div>p{font-size: 16px;line-height: 30px;}
 	.lsdd-xx>p{width: 30%;line-height: 80px;color: red;}
 	</style>

@@ -8,12 +8,13 @@
 	    <div class="snav">
         	<div class="ddxx">
         		<span></span>
-        		<p><span class="iconfont icon-qicheqianlian-"></span><strong>订单信息</strong></p>
+        		<router-link to="/ddxinxi"  tag='p'><span class="iconfont icon-qicheqianlian-"></span><strong>订单信息</strong></router-link>
+        		
         		<span></span>
         	</div>
         	<div >
         		<span></span>
-        		<p><span  class="iconfont icon-icon"></span><strong>历史订单</strong></p>
+        		<router-link to="/lisddxinx"  tag='p'><span  class="iconfont icon-icon"></span><strong>历史订单</strong></router-link>
         		<span></span>
         			
         	</div>
@@ -74,7 +75,7 @@
         			<div class="xqxinx">
         				<div>
         					<div class="xqxinx-js">
-        						<h3>香煎牛排</h3>
+        						<h3>香煎牛排香煎牛排香煎牛排</h3>
         						<p>￥20元</p>
         						<p><strong>订单时间</strong><span>2018.08.28</span></p>
         					</div>
@@ -185,7 +186,7 @@
 	.xqxinx{display: flex;flex-direction: column;width: 70%;}
 	.xqxinx>div:nth-of-type(1){display: flex;justify-content: space-between;}
 	.xqxinx-js{padding: 5px;font-size: 12px;}
-	.xqxinx-js>h3{font-size: 14px;font-weight: 900;line-height: 20px;}
+	.xqxinx-js>h3{font-size: 14px;font-weight: 900;line-height: 20px;width: 100px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 	.xqxinx-js>p:nth-of-type(1){color: orange;line-height: 20px;font-size: 14px;}
 	.xqxinx-js>p:nth-of-type(2)>strong{margin-right: 5px;line-height: 20px;}
 	.xqxinx>div:nth-of-type(1)>.xqshul{display: flex;align-items: center;}
