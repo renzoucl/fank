@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import HelloWorld from '@/components/HelloWorld'
 import Home from "../components/home.vue"
 import Dian from "../components/dian.vue"
@@ -70,10 +71,10 @@ export default new Router({
     },
 
 
-    // {
-    //   path:"/",
-    //   redirect:"/home"
-    // }
+    {
+      path:"/",
+      redirect:"/home"
+    }
   ]
 })
 

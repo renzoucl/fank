@@ -6,7 +6,8 @@ import router from './router'
 import "./icon/iconfont.css"
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
-import "./js/jquery.js"
+//import "./js/jquery.js"
+import $ from "jquery"
 Vue.use(MintUI)
 
 

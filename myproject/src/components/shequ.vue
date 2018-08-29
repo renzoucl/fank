@@ -560,7 +560,7 @@ div.content1>div:nth-of-type(4) {
     #shequcon ul li .you p:nth-of-type(3){width: 100%;height: 20px;font-size: 12px;color: orange}
 
 /* 第三页 */
-#pinglun{min-height: 205px;height: auto!important;border: 1px solid #000;}
+#pinglun{min-height: 205px;height: auto!important;}
 #pinglun>li{min-height: 50px;height: auto!important;border-radius: 10px;margin-top: 10px;margin-left: 15px;padding: 10px 20px 0px 70px;box-sizing: border-box;position: relative;box-shadow:0 0 10px #555 }
 #pinglun>li h3{font-size: 16px;font-weight: bold;color: orange}
 #pinglun>li p{font-size: 16px;color: gray}

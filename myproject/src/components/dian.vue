@@ -10,56 +10,56 @@
          <div class="content1">
             <div style="display: block;">
                 <!-- 店铺活动 -->
-         
-         <div class="biaoti">
-          <p><span class="iconfont icon-shouye1"></span>店铺活动</p>
-          
-       </div>
-
-       <div id="yingyang">
-          <div class="content">
-               <div class="zuo">
-                   <div class="shang">
-                     <img src="static/sha.jpg" alt="">
-                   </div>
-                   <p>沙县小吃</p>
-                   <p><span class="iconfont icon-dizhi"></span>500m</p>
-               </div>
-               <div class="you">
-                 <h3>滋补老鸭汤</h3>
-                 <p>老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍</p>
-                 <p><span class="iconfont icon-jian1"></span> 满100减20 满50减10</p>
-                 <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
-               </div>
-               <span class="iconfont icon-jian" ></span>
-          </div>
-           <!-- 饭咖热铺 -->
-         <div class="biaoti">
-          <p><span class="iconfont icon-hot-full"></span>饭咖热铺</p>
-          
-       </div>
-       <div id="repu">
-           <div class="repucon">
-                <div class="zuo">
-                    <img src="static/baozi.jpg">
-
+           
+                  <div class="biaoti">
+                    <p><span class="iconfont icon-shouye1"></span>店铺活动</p>
+                    
                 </div>
-                <div class="you">
-                  <h3>哈哈包子铺<span class="iconfont icon-xin"></span>5612</h3>
-                  <p>包子简洁包子简洁包子简洁包子简洁包子简洁</p>
-                  <p><span>品类多</span> <span>安静</span> <span>环境好</span></p>
-                  <p>
-                    <span class="iconfont icon-dizhi1">大学路航海路往东300m</span>
-                    <span class="iconfont icon-qicheqianlian-">6666</span>
-                    <span class="iconfont icon-qicheqianlian-">8888</span>
-                  </p>
+
+                <div id="yingyang">
+                    <div class="content">
+                        <div class="zuo">
+                            <div class="shang">
+                              <img src="static/sha.jpg" alt="">
+                            </div>
+                            <p>沙县小吃</p>
+                            <p><span class="iconfont icon-dizhi"></span>500m</p>
+                        </div>
+                        <div class="you">
+                          <h3>滋补老鸭汤</h3>
+                          <p>老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍</p>
+                          <p><span class="iconfont icon-jian1"></span> 满100减20 满50减10</p>
+                          <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
+                        </div>
+                        <span class="iconfont icon-jian" ></span>
+                    </div>
+                    <!-- 饭咖热铺 -->
+                  <div class="biaoti">
+                    <p><span class="iconfont icon-hot-full"></span>饭咖热铺</p>
+                    
                 </div>
-          </div>
-       </div>
+                <div id="repu">
+                    <div class="repucon">
+                          <div class="zuo">
+                              <img src="static/baozi.jpg">
+
+                          </div>
+                          <div class="you">
+                            <h3>哈哈包子铺<span class="iconfont icon-xin"></span>5612</h3>
+                            <p>包子简洁包子简洁包子简洁包子简洁包子简洁</p>
+                            <p><span>品类多</span> <span>安静</span> <span>环境好</span></p>
+                            <p>
+                              <span class="iconfont icon-dizhi1">大学路航海路往东300m</span>
+                              <span class="iconfont icon-qicheqianlian-">6666</span>
+                              <span class="iconfont icon-qicheqianlian-">8888</span>
+                            </p>
+                          </div>
+                    </div>
+                </div>
        
 
 
-       </div>
+               </div>
             </div>
             <div style="display: none;">
                 <div id="shilei">
