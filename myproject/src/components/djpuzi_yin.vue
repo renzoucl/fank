@@ -47,14 +47,14 @@
 	    		</div>
 	    	</div>
 	    	<div class="s-nav">
-	    		<router-link to="/djpuzi_cai" class="xzshi" tag='p'>菜品</router-link>
-	    		<router-link to="/djpuzi_yin"  tag='p'>饮品</router-link>
+	    		<router-link to="/djpuzi_cai"  tag='p'>菜品</router-link>
+	    		<router-link to="/djpuzi_yin" class="xzshi" tag='p'>饮品</router-link>
 	    		<router-link to="/djpuzi_yhq"  tag='p'>优惠卷</router-link>
 	    	</div>
 	    	<div class="s-main">
 	    		<div class="smian-top">
 	    			<div class="smt-img">
-	    				<img src="static/niurou.png"/>
+	    				<img src="static/8.jpg"/>
 	    				<p></p>
 	    			</div>
 	    			<div class="smt-right">
@@ -88,7 +88,7 @@
 	    		<div class="sm-show">
 	    			<div class="box">
 	    				<div class="show-img">
-	    					<img src="static/xia.png"/>
+	    					<img src="static/7.png"/>
 	    				</div>
 	    				<div class="show-js">
 	    					<h3>香辣吓</h3>
@@ -97,7 +97,7 @@
 	    			</div>
 	    			<div class="box">
 	    				<div class="show-img">
-	    					<img src="static/xia.png"/>
+	    					<img src="static/8.jpg"/>
 	    				</div>
 	    				<div class="show-js">
 	    					<h3>香辣吓</h3>
@@ -134,7 +134,7 @@
   
 
   export default {
-    name: 'Djpuzi_cai',
+    name: 'Djpuzi_yin',
     data(){
       return {
         str:"店家铺子",

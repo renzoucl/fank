@@ -5,51 +5,101 @@
 	      <div>{{str}}</div>
 	      <div><p><span class="iconfont icon-sousuo"></span></p></div>  
 	    </header>  
-	    <div id="nav">
-	      	<router-link to='/xican'tag='div'><span class="iconfont icon-jiangbei"></span><strong>综合排序</strong></router-link>
+	    <div id="nav" @click="tap()">
+	      	<div class="xuanzhong" >
+	      		<span class="iconfont icon-jiangbei" style="color: orange;"></span>
+	      		<strong style="color: orange;">综合排序</strong>
+	      	</div>
 
-	      <router-link to='/xican'tag='div' class="xuanzhong"><span class="iconfont icon-qicheqianlian-"></span><strong>月单排序</strong></router-link>
-	      	<router-link to='/xican'tag='div'><span class="iconfont icon-xinxi"></span><strong>热评排序</strong></router-link>
-	      </div>
-        <section>
-	      
-	      <div class="list">
-	      	<div >
-	      		<div class="list-left"><img src="static/xc.png"/><span></span></div>
-	      		<div class="list-right">
-	      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>562</strong></div>
-	      			
-	      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
-	      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
-	      			<div>
-	      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
-	      				<div><p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
-	      				<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
-	      				</div>
-	      			</div>
-	      		</div>
+	       <div >
+	      	    <span class="iconfont icon-qicheqianlian-"></span>
+	      	    <strong>月单排序</strong>
+	       </div>
+	      	<div>
+	      		<span class="iconfont icon-xinxi"></span>
+	      		<strong>热评排序</strong>
 	      	</div>
-	      </div>
+	    </div>
+        <section class="content1">
+	        <div>
+		      	<div class="list" style="display: block;">
+			      	<div >
+			      		<div class="list-left"><img src="static/xc.png"/><span></span></div>
+			      		<div class="list-right">
+			      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>562</strong></div>
+			      			
+			      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
+			      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
+			      			<div>
+			      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
+			      				<div><p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
+			      				<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+			    
+			    <div class="list" style="display: block;">
+			      	<div >
+			      		<div class="list-left"><img src="static/xc.png"/><span></span></div>
+			      		<div class="list-right">
+			      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>562</strong></div>
+			      			
+			      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
+			      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
+			      			<div>
+			      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
+			      				<div><p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
+			      				<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+			    
+			    
+	        </div>
 	      
-	      
-	      <div class="list">
-	      	<div >
-	      		<div class="list-left"><img src="static/xc.png"/><span></span></div>
-	      		<div class="list-right">
-	      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>562</strong></div>
-	      			
-	      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
-	      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
-	      			<div>
-	      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
-	      				<div>
-	      					<p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
-	      					<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
-	      				</div>
-	      			</div>
-	      		</div>
-	      	</div>
-	      </div>
+	      	<div style="display: none;">
+		      	<div class="list" style="display: block;">
+			      	<div >
+			      		<div class="list-left"><img src="static/xia.png"/><span></span></div>
+			      		<div class="list-right">
+			      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>700</strong></div>
+			      			
+			      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
+			      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
+			      			<div>
+			      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
+			      				<div><p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
+			      				<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+	        </div>
+	        
+	        <div style="display: none;">
+		      	<div class="list" style="display: block;">
+			      	<div >
+			      		<div class="list-left"><img src="static/xc.png"/><span></span></div>
+			      		<div class="list-right">
+			      			<div ><h3>阳光点咖啡店 </h3><span class="iconfont icon-xin"></span><strong>900</strong></div>
+			      			
+			      			<p>阳光点咖啡店是一家主营咖啡饮品的店铺，同时还有各种甜点供大家选择食用哦！</p>
+			      			<div><span>品类多</span><span>安静</span><span>环境好</span></div>
+			      			<div>
+			      				<p><span class="iconfont icon-dizhi1"></span><strong>京广路京广路京广路京广路京广路京广路京广路京广路京广路京广路</strong></p>
+			      				<div><p><span class="iconfont icon-qicheqianlian-"></span><strong>2100</strong></p>
+			      				<p><span class="iconfont icon-xinxi"></span><strong>997</strong></p>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+	        </div>
 	      
 	     
 	    </section>
@@ -57,7 +107,7 @@
   </template>
   
   <script>
-  
+  import jquery from "jquery"
 
   export default {
     name: 'Xican',
@@ -67,9 +117,17 @@
       }
     },
     methods:{
-	    getdata(msg){
-	      this.tit=msg
-	    }
+	   tap(){
+         
+          $("#nav>div").on("click",function(){
+           $("#nav span").css({"color":"red"})
+           $("#nav strong").css({"color":""})
+            var index = $(this).index();
+            $(this).find("span").css({"color":"orange"})
+             $(this).find("strong").css({"color":"orange"})
+            $(".content1>div").eq(index).show().siblings().hide()   
+          })
+       }
 	  },
     mounted() {
       this.$emit("toparent",this.str)
@@ -93,8 +151,8 @@
 	header>div:nth-of-type(3) span{font-size: 22px;color: #fff}
 	header>div:nth-of-type(3) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-right: 5px}
 	#nav{display: flex;justify-content: space-around;padding: 0 5px;}
-	#nav .xuanzhong{color: orange;}
-	#nav .xuanzhong>span{color: orange;}
+	/*#nav .xuanzhong{color: orange;}
+	#nav .xuanzhong>span{color: orange;}*/
 	#nav>div{width: 33.3%;height: 38px;text-align: center;border: 1px solid #CCCCCC;line-height:38px ;color: #000000;}
 	#nav>div>span{color: red;margin-right: 5px;font-size: 18px;}
   #nav>div>strong{font-size: 18px;}
@@ -110,7 +168,7 @@
     .list-right{padding-left:8px;}
     .list-right>div{padding: 2px 0;font-size: 14px;}
     .list-right>div:nth-of-type(1)>h3{font-size: 14px;font-weight: 900;float: left;margin-right: 10px;}
-    .list-right>div:nth-of-type(1)>span{color: red;font-size: 12px;}
+    .list-right>div:nth-of-type(1)>span{color: red;font-size: 12px;margin-right: 5px}
     .list-right>p{line-height: 12px;width:40% ;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 12px;}
       .list-right>div:nth-of-type(2){line-height: 12px;font-size: 12px;margin-top: 5px;}
     .list-right>div:nth-of-type(2)>span{

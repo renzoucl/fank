@@ -25,7 +25,8 @@
 	    				<div class="diansj1">
 	    					<strong>15</strong>
 	    					<p>
-	    						<span class="iconfont icon-wodecaipu"></span>
+	    						<span class="iconfont icon-tuijiancaipu"></span>
+	    						
 	    						<strong>菜单</strong>
 	    					</p>
 	    				</div>
@@ -47,9 +48,9 @@
 	    		</div>
 	    	</div>
 	    	<div class="s-nav">
-	    		<p >菜品<span>|</span></p>
-	    		<p>饮品</p>
-	    		<p class="xzshi"><span>|</span>优惠卷</p>
+	    		<router-link to="/djpuzi_cai"  tag='p'>菜品</router-link>
+	    		<router-link to="/djpuzi_yin"   tag='p'>饮品</router-link>
+	    		<router-link to="/djpuzi_yhq" class="xzshi" tag='p'>优惠卷</router-link>
 	    	</div>
 	    	<div class="s-main">
 	    		<div class="sm-yhq">
@@ -61,7 +62,7 @@
 			    				<p><strong>有效期</strong><span>2018.8.28-2018.9.28</span></p>
 		    				</div>
 		    				<div>
-		    					<img src="static/yhq.png"/>
+		    					<img src="static/xj.png"/>
 		    				</div>
 		    				
 		    			</div>
@@ -79,7 +80,7 @@
 			    				<p><strong>有效期</strong><span>2018.8.28-2018.9.28</span></p>
 		    				</div>
 		    				<div>
-		    					<img src="static/yhq.png"/>
+		    					<img src="static/xj.png"/>
 		    				</div>
 		    				
 		    			</div>
