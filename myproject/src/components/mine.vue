@@ -52,8 +52,17 @@
               </div>
             </li>
             <li>
+                    <div>
+                        <span class="iconfont icon-shiwu"></span> 我的银行卡
+                    </div>
+                    <div>
+                        <p>8</p><span class="iconfont icon-houtuimian"></span>
+                    </div>
+                </li>
+            <li>
+                
                 <div>
-                    <span class="iconfont icon-xinxi"></span>  消息通知
+                    <span class="iconfont icon-xinxi"></span>  我的动态
                 </div>
                 <div>
                     <p>0</p><span class="iconfont icon-houtuimian"></span>
