@@ -10,14 +10,14 @@
          <div class="content1">
             <div style="display: block;">
                 <!-- 店铺活动 -->
-           
-                  <div class="biaoti">
+                
+                <div class="biaoti">
                     <p><span class="iconfont icon-shouye1"></span>店铺活动</p>
                     
                 </div>
 
                 <div id="yingyang">
-                    <div class="content">
+                    <div class="content" @click="xiangqing()">
                         <div class="zuo">
                             <div class="shang">
                               <img src="static/sha.jpg" alt="">
@@ -39,7 +39,7 @@
                     
                 </div>
                 <div id="repu">
-                    <div class="repucon">
+                    <div class="repucon" @click="xiangqing()">
                           <div class="zuo">
                               <img src="static/baozi.jpg">
 
@@ -134,6 +134,9 @@
             $(this).find("span").css({"color":"orange"})
             $(".content1>div").eq(index).show().siblings().hide()   
           })
+       },
+       xiangqing(){
+          this.$router.push("/fooddetail")
        }
     },
     mounted() {

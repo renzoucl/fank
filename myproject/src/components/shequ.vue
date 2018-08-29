@@ -83,7 +83,7 @@
                            <img src="static/baozi.jpg" alt="">
                          </div>
                           <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                          <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                          <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                       </li>
                       <li> 2 </li>
                        
@@ -94,7 +94,7 @@
                               <img src="static/baozi.jpg" alt="">
                             </div>
                              <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                          </li>
                         <li> 2 </li>  
                     </ul>
@@ -104,7 +104,7 @@
                               <img src="static/baozi.jpg" alt="">
                             </div>
                              <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                          </li>
                         <li> 2</li>  
                     </ul>
@@ -123,7 +123,7 @@
                        <img src="static/shi.jpg" alt="">
                      </div>
                       <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                      <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                      <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                   </li>
                   <li> 2 </li>
                    
@@ -134,7 +134,7 @@
                           <img src="static/shi.jpg" alt="">
                         </div>
                          <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                      </li>
                     <li> 2 </li>  
                 </ul>
@@ -144,7 +144,7 @@
                           <img src="static/shi.jpg" alt="">
                         </div>
                          <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>粉丝<span>16</span>万</p>
+                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                      </li>
                     <li> 2</li>  
                 </ul>
@@ -165,15 +165,15 @@
             <div id="box">
 			
                 <div id="box1" class="card">
-                   <span>1</span>
+                   
                  </div>
                  
                  <div id="box2" class="card">
-                   <span>2</span>
+                   
                  </div>
                  
                  <div id="box3" class="card">
-                   <span>3</span>
+                  
                  </div>
                  
              </div> 
@@ -540,9 +540,9 @@ div.content1>div:nth-of-type(4) {
     #box{height: 200px;position: relative;}
   	#box>div{height: 100%;width: 80%;text-align: center;position: absolute;transition: all 1s;}
     #box span{font-size: 60px;font-weight: bold;}
-		#box1{background: greenyellow;border-radius: 10px;}
-		#box2{background: orange;border-radius: 10px;}
-		#box3{background: pink;border-radius: 10px;}
+		#box1{background:url('../../static/110.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box2{background:url('../../static/111.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box3{background:url('../../static/112.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
 		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0) translatex(15%);opacity: 0.1;width: 70%;}
 		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px) translatex(5%);opacity: .5;width: 85%}
 		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 
@@ -550,10 +550,10 @@ div.content1>div:nth-of-type(4) {
     #shequcon{min-height: 200px;height: auto!important;} 
     #shequcon ul{width: 100%;;height: 100px;display: flex;justify-content: space-between;margin-top: 10px}
     #shequcon ul li{width: 48.5%;height: 100px;border-radius: 10px;display: flex;justify-content: space-between;}
-    #shequcon ul li .zuo{width: 35%;height: 100px;border-radius: 10px;box-shadow: 0 0 5px gray}
-    #shequcon ul li .zuo>div{width:100%;height: 80px}
-    #shequcon ul li .zuo>div img{width: 100%;height: 80px;border-radius: 10px}
-    #shequcon ul li .zuo p{width: 100%;height: 20px;text-align: center;line-height: 20px;font-weight: bold;font-size: 14px}
+    #shequcon ul li .zuo{width: 35%;height: 100px;border-radius: 10px;box-shadow: 0 0 5px gray;box-sizing: border-box}
+    #shequcon ul li .zuo>div{margin-top: 5px;width:100%;height: 60px;border-radius: 50%}
+    #shequcon ul li .zuo>div img{width: 100%;height: 60px;border-radius: 10px;border-radius: 50%}
+    #shequcon ul li .zuo p{margin-top: 10px;width: 100%;height: 20px;text-align: center;line-height: 20px;font-weight: bold;font-size: 14px}
     #shequcon ul li .you{width: 64%;height: 100px;border-radius: 10px;padding: 5px;box-sizing: border-box;box-shadow: 0 0 5px gray}
     #shequcon ul li .you p:nth-of-type(1){width: 100%;height: 35px;font-size: 12px;overflow: hidden;color: gray}
     #shequcon ul li .you p:nth-of-type(2){width: 100%;height: 20px;font-size: 12px;margin: 8px 0;color: fuchsia}

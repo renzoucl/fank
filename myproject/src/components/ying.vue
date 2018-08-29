@@ -14,16 +14,16 @@
                <!-- 轮播 -->
             <div id="box">
 			
-              <div id="box1" class="card">
-                 <span>1</span>
+              <div id="box1" class="card" @click="xiangqing()">
+                
                </div>
                
-               <div id="box2" class="card">
-                 <span>2</span>
+               <div id="box2" class="card" @click="xiangqing()">
+                
                </div>
                
-               <div id="box3" class="card">
-                 <span>3</span>
+               <div id="box3" class="card" @click="xiangqing()">
+                 
                </div>
                
              </div> 
@@ -203,8 +203,6 @@
           </div>
           
 
-
-
       </div>
       
     </div>
@@ -220,6 +218,7 @@
       }
     },
     methods:{
+
        tap(){
          
           $("#leader>div").on("click",function(){
@@ -228,6 +227,9 @@
             $(this).find("span").css({"color":"orange"})
             $(".content1>div").eq(index).show().siblings().hide()   
           })
+       },
+       xiangqing(){
+          this.$router.push("/fooddetail")
        }
     },
     mounted() {
@@ -277,9 +279,9 @@ div.content1>div:nth-of-type(4) {
 #box{height: 200px;position: relative;}
   	#box>div{height: 100%;width: 100%;text-align: center;position: absolute;transition: all 1s;}
     #box span{font-size: 60px;font-weight: bold;}
-		#box1{background: greenyellow;border-radius: 10px;}
-		#box2{background: orange;border-radius: 10px;}
-		#box3{background: purple;border-radius: 10px;}
+		#box1{background:url('../../static/110.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box2{background:url('../../static/111.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		#box3{background:url('../../static/112.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
 		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0) translatex(15%);opacity: 0.1;width: 70%;}
 		#box>div:nth-of-type(2){transform: rotateX(-20deg) translatez(40px) translatex(5%);opacity: .5;width: 85%}
 		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 

@@ -90,7 +90,7 @@
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
      
-    #beijing{position: relative;width: 100%;height: 200px;background: url('../../static/100.jpg') no-repeat fixed center/cover; overflow: hidden;}
+    #beijing{position: relative;width: 100%;height: 200px;background: url('../../static/100.jpg') no-repeat center/cover; overflow: hidden;}
     #beijing .set{width: 30px;height: 30px;border-radius: 50%;background: yellowgreen;float: right;text-align: right;line-height: 30px;margin: 8px}
     #beijing .set span{font-size: 30px;color: #fff}
     #beijing .head{width: 100%;height: 80px;margin-top: 40px;display: flex;justify-content: center;align-items: center}
