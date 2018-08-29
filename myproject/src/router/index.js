@@ -9,10 +9,11 @@ import Shequ from "../components/shequ.vue"
 import Mine from "../components/mine.vue"
 import Pub from "../components/pub.vue"
 import Myshequ from "../components/myshequ.vue"
+import Friendshome from "../components/friendshome.vue"
 
 // 聂响
 import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
- import Friendshome from "../components/friendshome.vue"
+ 
  import Djpuzi_cai from "../components/djpuzi_cai.vue"
  import Djpuzi_yin from "../components/djpuzi_yin.vue"
  import Search from "../components/search.vue"
