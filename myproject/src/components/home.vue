@@ -105,7 +105,7 @@
         <div id="yingyang">
            <div class="content">
                 <div class="zuo">
-                    <div class="shang"><img src="static/222.jpg"></div>
+                    <div class="shang"><img :src="touimg"></div>
                     <p>特朗普</p>
                     <p><span class="iconfont icon-dizhi"></span>美国.华盛顿特区.白宫</p>
                 </div>
@@ -123,14 +123,16 @@
   </template>
   
   <script>
-   
+   import axios from "axios"
 
   export default {
     name: 'Home',
     data(){
       return {
         str:"首页",
-        msg: ""
+        msg: "",
+        touimg:require("../../static/222.jpg")
+
       }
     }
     ,
@@ -148,7 +150,19 @@
 				},100)
 
 				
-			},1000)
+      },1000)
+      
+//  请求数据
+   var _this=this;
+   axios({
+				url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
+			})
+			.then(function(data){
+			//	console.log(data.data.data)
+				_this.arr=data.data.data
+			})
+
+
     }
       
   

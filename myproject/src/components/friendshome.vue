@@ -2,7 +2,7 @@
   <div id="wode">
       <div id="beijing">
         <header>
-          <div class="left">
+          <div class="left" @click="toshequ()">
                   <span class="iconfont icon-arrow_left_f"></span>
           </div>
           <div class="middle"></div>
@@ -186,6 +186,9 @@ export default {
             $(this).find("span").css({"color":"orange"})
             $(".content1>div").eq(index).show().siblings().hide()   
           })
+       },
+       toshequ(){
+           this.$router.push("/shequ")
        }
     },
   mounted() {

@@ -17,21 +17,22 @@
                 </div>
 
                 <div id="yingyang">
-                    <div class="content" @click="xiangqing()">
+                    <div class="content" v-for="(item,i) in arr">
+                        
                         <div class="zuo">
                             <div class="shang">
-                              <img src="static/sha.jpg" alt="">
+                              <img :src="item.pimg" alt="">
                             </div>
-                            <p>沙县小吃</p>
+                            <p>{{item.pid}}</p>
                             <p><span class="iconfont icon-dizhi"></span>500m</p>
                         </div>
                         <div class="you">
-                          <h3>滋补老鸭汤</h3>
-                          <p>老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍老鸭汤介绍</p>
-                          <p><span class="iconfont icon-jian1"></span> 满100减20 满50减10</p>
+                            <router-link :to="'/detail/'+item.pid"><h3>{{item.pname}}</h3>      </router-link>
+                          <p>{{item.pdesc}}</p>
+                          <p><span class="iconfont icon-jian4"></span> 满100减20 满50减10</p>
                           <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
                         </div>
-                        <span class="iconfont icon-jian" ></span>
+                        <span class="iconfont icon-hot-line" style="font-size:20px;color:red;margin-right:10px"></span>
                     </div>
                     <!-- 饭咖热铺 -->
                   <div class="biaoti">
@@ -100,29 +101,20 @@
       
   
 
-
-
-         
-         
-
-
-
-
-
-
-
-
-
     </div>
 </template>
   
   <script>
+   import axios from "axios"
+
   export default {
     name: 'Dian',
     data(){
       return {
         str:"店家",
-        msg: ""
+        msg: "",
+        arr:[],
+       
       }
     },
     methods:{
@@ -141,7 +133,17 @@
     },
     mounted() {
       this.$emit("toparent",this.str)
-      
+
+      var _this=this;
+			axios({
+				url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
+			})
+			.then(function(data){
+				console.log(data.data.data)
+        _this.arr=data.data.data
+        
+			})
+
 
 
     },
@@ -164,19 +166,19 @@
       .toubiao{color: #fff;font-size: 14px;line-height: 30px;text-align: center;height: 30px;background: #fe6815;margin-top: 5px;border-top-left-radius: 8px;border-top-right-radius: 8px; }
 
    /* 营养 */
-   #yingyang{min-height: 200px;height: auto!important;margin-top: 5px;}
-    #yingyang .content{position:relative;height: 180px;display: flex;justify-content: space-between;border-radius: 10px;box-shadow: 0px 5px 10px #d5d1d1;border: 1px solid #e8e6e6}
+   #yingyang{min-height: 180px;height: auto!important;margin-top: 5px;box-sizing: border-box}
+    #yingyang .content{margin-top:10px;position:relative;height: 150px;display: flex;justify-content: space-between;border-radius: 10px;box-shadow: 0px 5px 10px #d5d1d1;border: 1px solid #e8e6e6}
     #yingyang .zuo{width: 30%;border-radius: 10px;padding-top: 10px;padding-right: 10px;}
-    #yingyang .zuo .shang{width: 100%;height: 100px;border-radius: 50%;}
+    #yingyang .zuo .shang{width: 100%;height: 80px;border-radius: 50%;}
     #yingyang .zuo .shang img{width: 100%;}
     #yingyang .zuo p:nth-of-type(1){width: 100%;height: 20px;margin-top: 5px;text-align: center;line-height: 30px;font-weight: bold;font-size: 14px;color: #3d3c3c;}
     #yingyang .zuo p:nth-of-type(2){width: 100%;height: 25px;margin-top: 5px;text-align: center;line-height: 30px;font-weight: bold;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-left: 5px;font-size: 14px;color: #3d3c3c;}
    
-    #yingyang .you{width: 65%;border-top-right-radius: 10px;border-bottom-right-radius: 10px;padding-top: 10px;padding-left: 15px;border-left: 1px solid #b5b3b3}
-    #yingyang .you  h3{font-size: 16px;font-weight: bold}
-    #yingyang .you p:nth-of-type(1){width: 100%;height: 40px;;margin-top: 15px;padding-right:15px;overflow: hidden;font-size:14px;color: #3d3c3c;}
+    #yingyang .you{width: 65%;border-top-right-radius: 10px;border-bottom-right-radius: 10px;padding-top: 5px;padding-left: 15px;border-left: 1px solid #b5b3b3}
+    #yingyang .you  h3{font-size: 16px;font-weight: bold;height: 20px;overflow: hidden;}
+    #yingyang .you p:nth-of-type(1){width: 100%;height: 40px;;margin-top: 10px;padding-right:15px;overflow: hidden;font-size:14px;color: #3d3c3c;}
     #yingyang .you p:nth-of-type(2){width: 100%;height: 30px;;margin-top: 5px;padding-right:5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:30px}
-    #yingyang .you p:nth-of-type(3){width: 100%;height: 25px;;margin-top: 10px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:25px}
+    #yingyang .you p:nth-of-type(3){width: 100%;height: 25px;;margin-top: 5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:25px}
     #yingyang .you p:nth-of-type(2) span{color: #72cc8f;font-size: 26px}
     #yingyang .you p:nth-of-type(3) span{color: #fadf06;font-size: 20px}
     #yingyang .icon-jian{position: absolute;top: 0px;right: 10px;font-size: 30px;color: #fadf06}

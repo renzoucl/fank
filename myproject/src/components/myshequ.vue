@@ -1,8 +1,8 @@
  <template>
         <div id="myshequ">
             <header>
-                <div class="left">
-                        <span class="iconfont icon-arrow_left_f"></span>
+                <div class="left" @click="toshequ()">
+                        <span class="iconfont icon-arrow_left_f" ></span>
                 </div>
                 <div class="middle">我的社区</div>
                 <div class="right">
@@ -63,7 +63,7 @@
                                                    <li></li>
                                                    <li></li>
                                                 </ul>
-                                                <div class="touxiang"><img src="static/222.jpg" alt=""></div>
+                                                <div class="touxiang" @click="tomyfriend()"><img src="static/222.jpg" alt=""></div>
                                                 <div class="xiaoxi">
                                                    <span class="iconfont icon-yanjing">  666</span>
                                                    <span class="iconfont icon-xinxi">  888</span>
@@ -137,6 +137,12 @@
             $(this).find("span").css({"color":"orange"})
             $(".content1>div").eq(index).show().siblings().hide()   
           })
+       },
+       toshequ(){
+           this.$router.push("/mine")
+       },
+       tomyfriend(){
+          this.$router.push("/friendshome")
        }
     },
       }

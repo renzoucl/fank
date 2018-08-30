@@ -179,7 +179,7 @@
              </div> 
           <!-- 我的社区 -->
           <div class="biaoti" style="margin-top:20px">
-              <p><span class="iconfont icon-shouye1"></span>我的社区</p>      
+              <p @click="tomyshequ()"><span class="iconfont icon-shouye1"></span>我的社区</p>      
           </div>
           <div id="shequcon">
                <ul>
@@ -317,6 +317,9 @@
             $(this).find("span").css({"color":"orange"})
             $(".content1>div").eq(index).show().siblings().hide()   
           })
+       },
+       tomyshequ(){
+          this.$router.push("/myshequ")
        }
     },
     mounted() {

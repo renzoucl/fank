@@ -4,7 +4,7 @@
       <header>
         <div><span class="iconfont icon-dizhi"></span>{{city}}</div>
         <div>{{tit}}</div>
-        <div><p><span class="iconfont icon-sousuo"></span></p></div>  
+        <div><p><span class="iconfont icon-sousuo" @click="sousuo()"></span></p></div>  
       </header>
       <section>
         <router-view @toparent="getdata"></router-view>
@@ -36,6 +36,9 @@
     methods:{
       getdata(msg){
         this.tit=msg
+      },
+      sousuo(){
+        this.$router.push("/search")
       }
     }
   }

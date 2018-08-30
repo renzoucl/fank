@@ -13,7 +13,6 @@ import Friendshome from "../components/friendshome.vue"
 
 // 聂响
 import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
- 
  import Djpuzi_cai from "../components/djpuzi_cai.vue"
  import Djpuzi_yin from "../components/djpuzi_yin.vue"
  import Search from "../components/search.vue"
@@ -26,7 +25,7 @@ import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
   import Bankcard from "../components/bankcard.vue"
   import Fooddetail from "../components/fooddetail.vue"
 
-//朱坏印
+//朱怀印
 import Register from "../components/register.vue"
 import Lr from "../components/lr.vue"
 import Index from "../components/index.vue"

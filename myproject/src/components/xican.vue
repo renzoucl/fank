@@ -3,7 +3,7 @@
         <header>
 	      <div><p><span class="iconfont icon-203"></span></p></div>
 	      <div>{{str}}</div>
-	      <div><p><span class="iconfont icon-sousuo"></span></p></div>  
+	      <div><p ><span class="iconfont icon-sousuo" ></span></p></div>  
 	    </header>  
 	    <div id="nav" @click="tap()">
 	      	<div class="xuanzhong" >
