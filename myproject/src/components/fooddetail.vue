@@ -2,202 +2,163 @@
 	<div id="fooddetail">
 			<header>
 					<div class="left">
-							<span class="iconfont icon-arrow_left_f"></span>
+						<router-link to='/dian'>
+							<span class="iconfont icon-arrow_left_f"></span>								
+						</router-link>
 					</div>
-					<div class="middle">我的银行卡</div>
+					<div class="middle">菜品详情</div>
 					<div class="right">
+					<span class="iconfont icon-xin fr"></span>
 							
 					</div>
 		  </header>
-		<!--菜品详情的轮播-->
-		<mt-swipe :auto="4000"  id="lunbo" style="box-shadow: 0px 5px 10px #888888;margin-top: 45px">
-            <mt-swipe-item class="img"><img src="static/meat.png" alt="">
-	            <h4><b>黑胡椒秘制酱两吃炸鸡腿</b></h4>
-	            <p><b>BLACK PEPPER SECRET SAUCE TWO FRIED CHICKENS</b></p>
-	            <p class="xiang">本店独家配方，全新口味，将鸡腿的美味与秘制酱完美结合，喷香扑鼻，吃了还想吃</p>
-            </mt-swipe-item>
-            <mt-swipe-item class="img"><img src="static/cake.png" alt="">
-            	<h4><b>奶油草莓翻糖蛋糕</b></h4>
-	            <p><b>CREAM STRAWBERRY CANDY CAKE</b></p>
-	            <p class="xiang">新鲜的草莓搭配进口植物奶油，好吃不油腻，减肥爱美的女孩儿不要错过</p>
-            </mt-swipe-item>
-            <mt-swipe-item class="img"><img src="static/food1.jpg" alt="">
-	            <h4><b>海鲜味增汤</b></h4>
-	            <p><b>SEAFOOD MISO SOUP</b></p>
-	            <p class="xiang">特聘日料大师小田切让研制适合中国食客口味的改良版味增汤，强烈推荐你试一试</p>
-            </mt-swipe-item>
-          </mt-swipe>
-          
-          
-          <h3>
-          	<span class="iconfont icon-shipin"></span>
-          	<b>菜品测评</b>
-          	<i>—FOOD TEST—</i>
-          </h3>
-          <div id="test">
-          	  <div class="pj">鸡肉好吃</div>
-              <div class="pj">店家服务态度好 </div>
-              <div class="pj">送餐速度快  </div>
-              <div class="pj"> 口味独特 </div>
-              <!--<div class="pj">就餐环境好</div>
-              <div class="pj"> 还会再来</div>-->
-          </div>
-             <!--底部的导航--> 
-             <ul>
-             	<li>
-             		<p>购物车</p>
-             		<p>SHOPPING CAR</p>
-             	</li>
-             	<li>
-             		<p>立即点菜</p>
-             		<p>ORDER NOW</p>
-             	</li>
-             	<li>
+		
+		<section>
+			<br/><br/><br/>
+			<div class="left">
+					<span class="iconfont icon-dianpu" style="font-size:24px;font-weight:bold;margin-right:5px;color: #ff9900"></span>
+					<span style="font-size:24px;font-weight:bold">好吃的烧烤店</span>
 
-             		<button class="jia" @click="add()">+</button>
-             		
-             		<span id="cai">
-						 <!-- {{this.$store.state.count}} -->
-						
-					</span>
-             		
-             		<button class="jian" @click="min()">—</button>
-             		
-             			
-             		
-             	</li>
-             </ul>
+			</div>
+			
+		 <!-- <h1 style="line-height: 40px;">多人餐</h1>
+		 <p class="top_tit">
+		 	<span class="new">新品</span>
+		 	<span>随时退</span>|<span>免预约</span>|<span>过期自动退</span>
+		 	<span class="fr">半年销量889</span>
+		  </p>		 -->
+		 	
+		 	<img :src="detail.pimg" style="margin-top: 20px;height: 200px;border-radius: 10px;padding: 0 8px;box-sizing: border-box" />
+		
+				<!-- <h3>其他</h3> -->
+				<!--<p>{{detail}}</p>-->
+			    <ul style="margin-top:20px;padding: 0 8px">
+			    	<li >
+			    		<span >{{detail.pname}}</span><span>（8份）</span>
+			    		<b class="fr">￥24</b>
+			    	</li>
+			    	<li >
+							<span >{{detail.pdesc}}</span><span>（8份）</span>
+							<b class="fr">￥24</b>
+					</li>
+			    	<li >
+							<span >{{detail.pid}}</span><span>（8份）</span>
+							<b class="fr">￥24</b>
+					</li>
+			    	<li >
+							<span >{{detail.pprice}}</span><span>（8份）</span>
+							<b class="fr">￥24</b>
+					</li>
+			    	
+			    </ul>
+			    <div class="bot">
+			    	<h1 class="fl price">
+							{{detail.pprice}}
+			    		<span>6折</span>
+			    	   <p>门市最高价￥132</p>
+			    	</h1>
+			    	
+			    	    <button class="buy fr">
+			    	    	<router-link to='/ddxinxi'>
+			    	    	立即抢购
+			    	    	</router-link>
+			    	    </button>
+			    	
+			    	
+			    </div>
+		</section>
                              
 	</div>
 </template>
 
 <script>
-	import $ from 'jquery'
-	
-	import {mapGetters,mapActions} from 'vuex';
-	
-	
-	
-	
-	export default{
-		name:'Fooddetail',
-		data(){
-			return{
-				str:'菜品详情',
-				msg:''
-				
+    import $ from 'jquery'
+	import axios from "axios"
+      export default {
+        name: 'Fooddetail',
+        data () {
+            return{
+				detail:[]
 			}
-		},
-		mounted(){
-            this.$emit("toparent",this.str)
         },
-        // computed:mapGetters([]),
-		// methods:{
-		// 	...mapActions(['add','min'])
-			
-		// }
-            
+        mounted(){
+           console.log(this.$route.params.id)//接收id值
+			var _this=this;
         
-			
-		
-	}
+			axios({
+				url:"http://jx.xuzhixiang.top/ap/api/detail.php",
+				params:{id:_this.$route.params.id}
+			})
+			.then(function(data){
+                _this.detail=data.data.data
+                console.log(_this.detail)
+			})
+ 
+		}
+
+      }
 </script>
 
 <style scoped=''>
 	header{height: 45px;width: 100%;background: #222222;display: flex;justify-content: space-between;position: fixed;top: 0;left: 0;z-index: 9999}
       header .left{width: 10%;height: 45px;text-align: center;line-height: 45px}
-      header .middle{width: 60%;height: 45px;text-align: center;line-height: 45px;font-weight: bold;color: #fff}
+      header .middle{width: 60%;height: 45px;text-align: center;line-height: 45px;font-weight: bold;color: #fff;}
       header .right{width: 10%;height: 45px;text-align: center;line-height: 45px}
       header .left span{font-size: 26px;color: #fce452}
       header .right span{font-size: 20px;color: #fce452}
 	body{color: #222;}
 	*{margin: 0;padding: 0;font-family: "微软雅黑"}
       #home{padding:0 8px}
-      
-      /*   顶部轮播图     */
-      #lunbo{
-      	margin: 0 auto;
-      	margin-top: 10px;
-      	width: 263px;
-         height: 365px;
-         border-radius: 5px;
-         padding:5px 0
+      img{display:block;width: 100%}
+      .icon-dianpu{color: #999999;margin-left: 10px;}
+      .top_tit span{padding:0 3px; color: #999999;}
+      .new{
+      	width:75px;
+      	height: 45px;
+      	border:1px #ff9900 solid;
+      	color: #ff9900;
+      	margin-left: 4px;
       }
-      #lunbo img{height: 260px;width: 100%;}
-      #lunbo p{
-      	font-size: 12px;
-      }
-      .xiang{margin-top: 6px;}
-      
-      /*      菜品测试           */
-      h3{margin-top: 20px;}
-      .icon-shipin{
-      	color:#fee97e;
-      }
-      i{display: block;font-weight: 900;}
-      #test{
-      	width:50%;
-      	height:70px;
-      	display: flex;
-      	flex-wrap: wrap;
-      	justify-content: space-around;
-      	margin: 0 auto;
-      }
-      .pj{
-      	border-radius: 20px;
-      	padding:3px 5px;
-      	height: 20px;
-      	border:1px pink solid;
-      	color: #fade19;
-      	text-align: center;
-      	font-size: 12px;
-      	line-height: 20px;
-     
-      }
-      
-      /*       底部导航                      */
-     /* ul{margin-left: 8px;position: absolute;bottom: 0;right: 0;width: 100%} */
-     li{
-     	height:42px;
-     	float: left;
-     	text-align: center;
-     	padding: 0 12px;
-     	background: #ff6714;
-     	/* border-radius: ; */
+     .fr{float: right;margin-right: 10px;color: #222;font-weight: bold}
+     .fl{float: left;margin-left: 10px;}
+     h1,h2{font-weight: 900;margin-left: 10px;}
+     h3{margin-top: 30px;font-weight: 900;margin-left: 10px;}
+     ul li{line-height: 30px;margin-left: 10px;margin-top: 10px;font-weight: bold;display: flex;justify-content: space-between}
+     ul li span:nth-of-type(1){display:inline-block;height:30px;width:220px;overflow:hidden;font-size: 16px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+	 ul li span:nth-of-type(2){display:inline-block;height:30px;width:70px;font-size: 16px;font-size: 16px}
+     ul li b{font-weight: 100;}
+     i{
+     	font-style: normal;
+     	border: 1px #ff9900 solid;
+     	border-radius: 20px  20px  20px 5px;
+     	color: #ff9900;
+     	background: #fff9ed;
+     	font-size: 12px;
+     	padding: 3px;
      	}
-		 li p{color: #fff;}
-     	li:first-child{
-     		border-radius:20px 0 0 0;
+     	.bot{
+     		position: fixed;
+     		bottom: 0;
+     		width: 100%;
+     		height: 90px;
+			 background: #fff
      	}
-     	li:nth-child(3){
-     		border-radius:0 20px 0 0 ;     		
-     	}
-     	li:hover{background: #ffdc14;}
-     #cai{display:inline;margin:10px 5px 0 5px;float: left;}
-
-       .jia{
-      	float: left;
-      	width:22px;
-      	height: 22px;
-      	background: #fbe11a;
-      	border: 0;
-      	margin-top: 12px;
-      	border-radius: 50px;
-      	font-size: 22px;
-      	line-height: 22px;
-      	color: white;
-      	
-      }
-       .jian{
-      	float: right;
-      	margin-top: 12px;       	
-      	width:22px;
-      	height: 22px;
-      	background: #fbe11a;
-      	border: 0;
-      	border-radius: 50%;
-      	font-size: 15px;
-      	line-height: 22px;
-      	color: white;
-      }
+     	.price{color: #ff9900;margin-top: 10px;}
+     	.price span{border: 1px #ff9900 solid;padding:0 2px;font-size: 14px;margin-left: 5px;}
+     	.price p{color: #999999;line-height: 40px;font-size: 15px;font-weight: 100;}
+     	.buy{
+     		width:130px;
+     		height:50px;
+     		color: white;
+     		padding:5px 10px;
+     		text-align: center;
+     		line-height: 40px;
+     		margin-top: 20px;
+     		margin-left: 40px;
+     		background: #ff9900;
+     		border: 0;
+     		font-size: 20px;
+     		border-radius: 40px;
+     		margin-bottom:50px;
+     		}
 </style>

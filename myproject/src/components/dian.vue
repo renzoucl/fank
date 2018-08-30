@@ -27,7 +27,7 @@
                             <p><span class="iconfont icon-dizhi"></span>500m</p>
                         </div>
                         <div class="you">
-                            <router-link :to="'/detail/'+item.pid"><h3>{{item.pname}}</h3>      </router-link>
+                            <router-link :to="'/fooddetail/'+item.pid"><h3>{{item.pname}}</h3></router-link>
                           <p>{{item.pdesc}}</p>
                           <p><span class="iconfont icon-jian4"></span> 满100减20 满50减10</p>
                           <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
@@ -106,7 +106,6 @@
   
   <script>
    import axios from "axios"
-
   export default {
     name: 'Dian',
     data(){
@@ -133,19 +132,15 @@
     },
     mounted() {
       this.$emit("toparent",this.str)
-
       var _this=this;
 			axios({
 				url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
 			})
 			.then(function(data){
-				console.log(data.data.data)
+				//console.log(data.data.data)
         _this.arr=data.data.data
         
 			})
-
-
-
     },
   }
   </script>
@@ -156,15 +151,12 @@
     #leader{width: 100%;height: 40px;display: flex;justify-content: space-between;position: fixed;top:45px;left: 0;z-index: 9999;}
     #leader>div{width: 25%;height:40px;background: #fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;box-shadow: 0px 0px 5px #888888;text-align: center;line-height: 40px;font-weight: bold}
     #leader>div span{color: #fb5a5b;margin-right: 5px;font-weight: bold}
-
       .biaoti{height: 50px;display: flex;justify-content: space-between;align-items: center;margin: 10px 0}
       .biaoti p{width: 150px;height: 50px;}
       .biaoti p:nth-of-type(1){font-size: 20px;font-weight: bold;text-align: left;line-height: 50px}
       .biaoti p:nth-of-type(1) span{color:#fcdd13;font-size: 20px;margin-right: 10px}
-
       .biaoti p:nth-of-type(2){width:80px;border-radius: 20px;height:30px;text-align: center;line-height: 30px;font-weight: bold;background: #fdd90a;color: #fff;}
       .toubiao{color: #fff;font-size: 14px;line-height: 30px;text-align: center;height: 30px;background: #fe6815;margin-top: 5px;border-top-left-radius: 8px;border-top-right-radius: 8px; }
-
    /* 营养 */
    #yingyang{min-height: 180px;height: auto!important;margin-top: 5px;box-sizing: border-box}
     #yingyang .content{margin-top:10px;position:relative;height: 150px;display: flex;justify-content: space-between;border-radius: 10px;box-shadow: 0px 5px 10px #d5d1d1;border: 1px solid #e8e6e6}
@@ -211,7 +203,6 @@ div.content1>div:nth-of-type(3) {
 div.content1>div:nth-of-type(4) {
 	background:plum;
 } */
-
 /* 第二个页面 */
 #shilei{min-height: 200px;height: auto!important;margin-top: 5px;}
 #shilei ul{width: 100%;height: 120px;;display: flex;justify-content: space-between;margin-top: 5px;}
@@ -224,7 +215,4 @@ div.content1>div:nth-of-type(4) {
 #shanshi ul li img{height: 160px;width: 100%;border-radius: 10px}
 /* 第四个页面 */
 img{display: block;width: 100%;height: 100%}
-
-
   </style>
-  

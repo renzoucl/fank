@@ -3,7 +3,10 @@
 
 			<header>
 					<div class="left">
+						<router-link to='/mine'>
 							<span class="iconfont icon-arrow_left_f"></span>
+						</router-link>
+							
 					</div>
 					<div class="middle">我的银行卡</div>
 					<div class="right">
@@ -43,7 +46,7 @@
 		      <div class="cd cd4">
 		      	
 		      	<img src="../../static/yz.png"/>
-		      	<button class="jia">+</button>
+		      	<button class="jia yz">+</button>
 		      	
 		      </div> 	
 		      <div class="cd cd5">
@@ -61,7 +64,7 @@
 		      </div> 	
 		      	
 		      	
-		      <!--<div class="cd cd7">
+		     <div class="cd cd7">
 		      	
 		      	<img src="../../static/yz.png"/>
 		      	<button class="jia">+</button>
@@ -72,7 +75,7 @@
 		      	<img src="../../static/jt.png"/>		      	
 		      	<button class="jia">+</button>
 		      	
-		      </div> 	-->
+		      </div> 	
 		    </div>   
 		      
 		      

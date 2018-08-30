@@ -1,5 +1,15 @@
 <template>
 	<div id="dolist">
+		<header>
+					<div class="left">
+						<router-link to='/mine'>
+							<span class="iconfont icon-arrow_left_f"></span>								
+						</router-link>
+					</div>
+					<div class="middle">我的动态</div>
+					<div class="right"></div>				
+		  </header>
+		  <br/><br/>
 		<div class="logo">
 			<img src="../../static/user_logo.png"/>
 			<div class="line">
@@ -53,6 +63,13 @@
 </script>
 
 <style scoped=''>
+	 *{margin: 0;padding: 0;font-family: "微软雅黑"}
+	 header{height: 45px;width: 100%;background: #222222;display: flex;justify-content: space-between;position: fixed;top: 0;left: 0;z-index: 9999}
+      header .left{width: 10%;height: 45px;text-align: center;line-height: 45px}
+      header .middle{width: 60%;height: 45px;text-align: center;line-height: 45px;font-weight: bold;color: #fff}
+      header .right{width: 10%;height: 45px;text-align: center;line-height: 45px}
+      header .left span{font-size: 26px;color: #fce452}
+      header .right span{font-size: 20px;color: #fce452}
     .logo{
     	margin-left: 40%;
     }
