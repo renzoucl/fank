@@ -5,10 +5,19 @@ import App from './App'
 import router from './router'
 import "./icon/iconfont.css"
 import MintUI from 'mint-ui'
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+import Checkbix from "checkbix"
+
+
 import 'mint-ui/lib/style.css'
 //import "./js/jquery.js"
 import $ from "jquery"
 Vue.use(MintUI)
+Vue.use(Checkbix)
+Vue.use(ElementUI);
 
 
 Vue.config.productionTip = false

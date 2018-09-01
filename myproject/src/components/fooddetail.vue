@@ -33,6 +33,7 @@
 				<!-- <h3>其他</h3> -->
 				<!--<p>{{detail}}</p>-->
 			    <ul style="margin-top:20px;padding: 0 8px">
+					<li id="titel">肯德基</li>
 			    	<li >
 			    		<span >{{detail.pname}}</span><span>（8份）</span>
 			    		<b class="fr">￥24</b>
@@ -49,6 +50,9 @@
 							<span >{{detail.pprice}}</span><span>（8份）</span>
 							<b class="fr">￥24</b>
 					</li>
+					<div @click="jiajian()" id="jiaru">
+							+ 加入购物车
+					</div>
 			    	
 			    </ul>
 			    <div class="bot">
@@ -58,12 +62,20 @@
 			    	   <p>门市最高价￥132</p>
 			    	</h1>
 			    	
-			    	    <button class="buy fr">
-			    	    	<router-link to='/ddxinxi'>
-			    	    	立即抢购
-			    	    	</router-link>
-			    	    </button>
-			    	
+					<div class="buy fr">
+							<div @click="tolist()">
+								<span >{{num}}</span>
+						        查看购物车
+							</div>
+							<div @click="tojiesuan()">
+								立即结算
+							</div>
+						<!-- <router-link to='/ddxinxi'>
+						加入购物车
+						</router-link> -->
+					</div>
+					
+					
 			    	
 			    </div>
 		</section>
@@ -78,9 +90,22 @@
         name: 'Fooddetail',
         data () {
             return{
-				detail:[]
+				detail:[],
+				num:""
 			}
-        },
+		},
+		methods:{
+           tolist(){
+			   this.$router.push("/gouwuche")
+		   },
+		   tojiesuan(){
+               
+		   },
+		   jiajian(){
+			//    console.log("ddd")
+              Number(this.num++)
+		   }
+		},
         mounted(){
            console.log(this.$route.params.id)//接收id值
 			var _this=this;
@@ -100,6 +125,7 @@
 </script>
 
 <style scoped=''>
+	body{ font-family:"微软雅黑";}
 	header{height: 45px;width: 100%;background: #222222;display: flex;justify-content: space-between;position: fixed;top: 0;left: 0;z-index: 9999}
       header .left{width: 10%;height: 45px;text-align: center;line-height: 45px}
       header .middle{width: 60%;height: 45px;text-align: center;line-height: 45px;font-weight: bold;color: #fff;}
@@ -107,6 +133,9 @@
       header .left span{font-size: 26px;color: #fce452}
       header .right span{font-size: 20px;color: #fce452}
 	body{color: #222;}
+	#titel{
+		font-size: 24px;font-weight: bold;font-family: "微软雅黑"
+	}
 	*{margin: 0;padding: 0;font-family: "微软雅黑"}
       #home{padding:0 8px}
       img{display:block;width: 100%}
@@ -126,7 +155,8 @@
      ul li{line-height: 30px;margin-left: 10px;margin-top: 10px;font-weight: bold;display: flex;justify-content: space-between}
      ul li span:nth-of-type(1){display:inline-block;height:30px;width:220px;overflow:hidden;font-size: 16px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 	 ul li span:nth-of-type(2){display:inline-block;height:30px;width:70px;font-size: 16px;font-size: 16px}
-     ul li b{font-weight: 100;}
+	 ul li b{font-weight: 100;}
+	 #jiaru{height: 30px;width: 120px;background: orange;border-radius: 30px;text-align: center;line-height: 30px;float: right;margin-top: 20px;font-weight: bold}
      i{
      	font-style: normal;
      	border: 1px #ff9900 solid;
@@ -134,31 +164,34 @@
      	color: #ff9900;
      	background: #fff9ed;
      	font-size: 12px;
-     	padding: 3px;
+     	
      	}
      	.bot{
      		position: fixed;
      		bottom: 0;
      		width: 100%;
-     		height: 90px;
-			 background: #fff
+     		height: 60px;
+		    background: #fff;
+			display: flex;
+			justify-content: space-between
      	}
-     	.price{color: #ff9900;margin-top: 10px;}
-     	.price span{border: 1px #ff9900 solid;padding:0 2px;font-size: 14px;margin-left: 5px;}
-     	.price p{color: #999999;line-height: 40px;font-size: 15px;font-weight: 100;}
+     	.price{color: #ff9900;width: 40%;height:60px;padding: 5px;margin: 0;}
+     	.price span{border: 1px #ff9900 solid;font-size: 14px;}
+     	.price p{color: #999999;line-height: 20px;font-size: 15px;font-weight: 100;}
      	.buy{
-     		width:130px;
-     		height:50px;
+     		width:60%;
+     		height:100%;
      		color: white;
      		padding:5px 10px;
      		text-align: center;
      		line-height: 40px;
-     		margin-top: 20px;
-     		margin-left: 40px;
-     		background: #ff9900;
+     		
+     		
+     		
      		border: 0;
      		font-size: 20px;
-     		border-radius: 40px;
-     		margin-bottom:50px;
+     		display: flex;justify-content: space-between;align-items: center;
+     		margin:0;padding: 0
      		}
+			 .buy>div{width: 48%;height: 50%;background: orange;color: #000;border-radius: 30px;text-align: center;line-height: 30px;font-size: 14px}	 
 </style>

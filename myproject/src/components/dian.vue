@@ -12,7 +12,7 @@
                 <!-- 店铺活动 -->
                 
                 <div class="biaoti">
-                    <p><span class="iconfont icon-shouye1"></span>店铺活动</p>
+                    <p><span class="iconfont icon-shouye1"></span>热门推荐</p>
                     
                 </div>
 
@@ -27,10 +27,12 @@
                             <p><span class="iconfont icon-dizhi"></span>500m</p>
                         </div>
                         <div class="you">
-                            <router-link :to="'/fooddetail/'+item.pid"><h3>{{item.pname}}</h3></router-link>
-                          <p>{{item.pdesc}}</p>
-                          <p><span class="iconfont icon-jian4"></span> 满100减20 满50减10</p>
-                          <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
+                          <router-link :to="'/fooddetail/'+item.pid">
+                              <h3>{{item.pname}}</h3>
+                              <p>{{item.pdesc}}</p>
+                              <p><span class="iconfont icon-jian4"></span> 满100减20 满50减10</p>
+                              <p><span class="iconfont icon-hui1"></span> 每天前10位免费一领一碗老鸭汤</p>
+                          </router-link>
                         </div>
                         <span class="iconfont icon-hot-line" style="font-size:20px;color:red;margin-right:10px"></span>
                     </div>
@@ -167,8 +169,8 @@
     #yingyang .zuo p:nth-of-type(2){width: 100%;height: 25px;margin-top: 5px;text-align: center;line-height: 30px;font-weight: bold;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-left: 5px;font-size: 14px;color: #3d3c3c;}
    
     #yingyang .you{width: 65%;border-top-right-radius: 10px;border-bottom-right-radius: 10px;padding-top: 5px;padding-left: 15px;border-left: 1px solid #b5b3b3}
-    #yingyang .you  h3{font-size: 16px;font-weight: bold;height: 20px;overflow: hidden;}
-    #yingyang .you p:nth-of-type(1){width: 100%;height: 40px;;margin-top: 10px;padding-right:15px;overflow: hidden;font-size:14px;color: #3d3c3c;}
+    #yingyang .you  h3{font-size: 16px;font-weight: bold;height: 20px;overflow: hidden;font-family: "微软雅黑"}
+    #yingyang .you p:nth-of-type(1){width: 100%;height: 40px;;margin-top: 10px;padding-right:15px;overflow: hidden;font-size:12px;color: gray;}
     #yingyang .you p:nth-of-type(2){width: 100%;height: 30px;;margin-top: 5px;padding-right:5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:30px}
     #yingyang .you p:nth-of-type(3){width: 100%;height: 25px;;margin-top: 5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:25px}
     #yingyang .you p:nth-of-type(2) span{color: #72cc8f;font-size: 26px}

@@ -11,6 +11,7 @@ import Pub from "../components/pub.vue"
 import Myshequ from "../components/myshequ.vue"
 import Friendshome from "../components/friendshome.vue"
 import Detail from "../components/detail.vue"
+import Gouwuche from "../components/gouwuche.vue"
 
 // 聂响
 import Djpuzi_yhq from "../components/djpuzi_yhq.vue"
@@ -51,6 +52,10 @@ Vue.use(Router)
 //路由页面
 export default new Router({
   routes: [
+    {
+			path:'/gouwuche',
+			component:Gouwuche
+		},
     {
 			path:'/detail',
 			component:Detail

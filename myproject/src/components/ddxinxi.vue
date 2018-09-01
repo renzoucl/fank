@@ -1,7 +1,7 @@
 <template>
     <div id="ddxinxi">
         <header>
-	      <div><p><span class="iconfont icon-203"></span></p></div>
+	      <div><p @click="todian()"><span class="iconfont icon-203"></span></p></div>
 	      <div>{{str}}</div>
 	      <div><!--<p><span class="iconfont icon-sousuo"></span></p>--></div>  
 	    </header>  
@@ -145,6 +145,10 @@
 	   },
 	    btn_qx(){
 	   	this.isShow=false
+	   },
+	   todian(){
+		   console.log("aaa")
+		   this.$router.push("/dian")
 	   }
 	  },
     mounted() {
