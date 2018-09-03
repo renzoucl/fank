@@ -81,7 +81,7 @@
 	    getdata(msg){
 	      this.tit=msg
 			},
-			todian(){
+		todian(){
 		   console.log("aaa")
 		   this.$router.push("/dian")
 	   }
@@ -112,6 +112,7 @@
 	.snav>div{width: 45%;height: 40px;background: #ff6714;text-align: center;line-height: 40px;border-radius:5px ;font-size: 16px;color: white;display: flex;align-items: center;justify-content: space-around;}
 	.snav>div>span{display: block;width: 5px;height: 5px;border-radius: 50%;background: white;}
 	.snav>div>p>span{display:inline-block;margin-right: 10px;width: 26px;height: 26px;text-align: center;line-height: 26px;background: white;color: red;border-radius: 50%;}
+	.snav>div>p>strong{color: #000000;}
 	.snav>.ddxx{background: orange;}
 	section{flex: 1;overflow: auto;padding: 0 10px;margin-top: 20px;}
 	.lsdd{display: flex;width: 100%;height: 80px;border-radius:10px ;box-shadow: #C0C0C0 1px 2px 5px 2px;margin-bottom: 20px;} 

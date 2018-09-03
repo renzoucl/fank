@@ -79,10 +79,49 @@
         						<p>￥20元</p>
         						<p><strong>订单时间</strong><span>2018.08.28</span></p>
         					</div>
-        					<div class="xqshul">
-        						<span :style="{background: colorA}" class="iconfont icon-jia"></span>
-        						<p>22</p>
-        						<span :style="{background: colorA}" class="iconfont icon-jian1"></span>
+        					<div class="xqshul" >
+        						<span :style="{background: colorA}" class="iconfont icon-jia" @click="jia($event,1)" ></span>
+        						<p id="1">1</p>
+        						<span :style="{background: colorA}" class="iconfont icon-jian1" @click="jian($event,1)" ></span>
+        					</div>
+        					
+        				</div>
+        				<div class="dd-status">
+        					<span :style="{background: colorA}" @click='tap()'>支付订单</span>
+        					<span v-show='false'>取消订单</span>
+        					<span v-show='false'>催菜</span>
+        					<span class="iconfont icon-shanchu"></span>
+        				</div>
+        			</div>
+        			
+        		</div>
+        	</div>
+        	
+        	
+        	<div class="sm-dd">
+        		<div class="dd-header">
+        			<div>
+        				<span class="iconfont icon-shouye1"></span>
+        				<p>唐津牛排</p>
+        				<span class="iconfont icon-houtuimian"></span>
+        			</div>
+        			<p>派送中</p>
+        		</div>
+        		<div class="dd-xiangq">
+        			<div class="xqimg">
+        				<img src="static/xj.png"/>
+        			</div>
+        			<div class="xqxinx">
+        				<div>
+        					<div class="xqxinx-js">
+        						<h3>香煎牛排香煎牛排香煎牛排</h3>
+        						<p>￥20元</p>
+        						<p><strong>订单时间</strong><span>2018.08.28</span></p>
+        					</div>
+        					<div class="xqshul" >
+        						<span :style="{background: colorA}" class="iconfont icon-jia" @click="jia($event,2)"></span>
+        						<p id='2'>1</p>
+        						<span :style="{background: colorA}" class="iconfont icon-jian1" @click="jian($event,2)"></span>
         					</div>
         					
         				</div>
@@ -127,7 +166,8 @@
       return {
         str:"订单信息",
         colorA:'yellow',
-        isShow:false
+        isShow:false,
+        num:1
       }
     },
     methods:{
@@ -149,6 +189,33 @@
 	   todian(){
 		   console.log("aaa")
 		   this.$router.push("/dian")
+	   },
+	   jia(e,a){
+//	   		console.log(e.target)
+	   		this.num++
+//	   		console.log(a)
+	   		var oP=document.querySelectorAll(".xqshul p")
+	   		for(let i=0;i<oP.length;i++){
+//	   			console.log(oP[i].getAttribute("id"))
+	   			if(oP[i].getAttribute("id")==a){
+//	   				console.log(oP[i])
+	   				oP[i].innerHTML=this.num
+	   			}
+	   		}
+	   },
+	   jian(e,a){
+
+	   		this.num--
+		   	if(this.num<1){
+		   		this.num=1
+		   	}
+	   		var oP=document.querySelectorAll(".xqshul p")
+	   		for(let i=0;i<oP.length;i++){
+	   			if(oP[i].getAttribute("id")==a){
+
+	   				oP[i].innerHTML=this.num
+	   			}
+	   		}
 	   }
 	  },
     mounted() {
@@ -177,6 +244,7 @@
 	.snav>div{width: 45%;height: 40px;background: #ff6714;text-align: center;line-height: 40px;border-radius:5px ;font-size: 16px;color: white;display: flex;align-items: center;justify-content: space-around;}
 	.snav>div>span{display: block;width: 5px;height: 5px;border-radius: 50%;background: white;}
 	.snav>div>p>span{display:inline-block;margin-right: 10px;width: 26px;height: 26px;text-align: center;line-height: 26px;background: white;color: red;border-radius: 50%;}
+	.snav>div>p>strong{color: #000000;}
 	.snav>.ddxx{background: orange;}
 	.sm-dd{margin-bottom: 20px;}
 	.dd-header{display: flex;justify-content: space-between;height: 20px;background: white;box-shadow: #F0F0F0 -1px -1px 5px 2px;border-radius: 5px;padding: 10px;font-size: 16px;border-bottom:1px dashed #F0F0F0 ;}
