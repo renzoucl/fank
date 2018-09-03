@@ -7,9 +7,10 @@
             </header>  
             <ul id="list">
                 <li v-for="(item,i) in arr">
-                    
-                    <el-checkbox v-model="checked" class="zuo1"></el-checkbox>
-                    <div class="zuo"><img src="" alt=""></div>
+                        <!-- v-model="checked" -->
+                    <!-- <el-checkbox class="zuo1" ></el-checkbox> -->
+                    <input type="checkbox" class="ipt" v-model = "item.checked">
+                    <div class="zuo"><img src="static/222.jpg" alt="a"></div>
                     <div class="you"> 
                         <div>
                             <div class="name">{{item.name}}</div>
@@ -32,7 +33,13 @@
                     
             
                 
-            </ul>          
+            </ul>    
+            <div id="jiesuan">
+                <input type="checkbox"  v-model = "allChecked" @click="handleChecked()">
+                <div class="money">合计：<span>￥{{pricetotale}}</span></div>
+                <div class="btn">结算</div>
+              
+            </div>      
         </div>
         <!-- moban -->
 
@@ -48,13 +55,18 @@
         name: 'Gouwuche',
         data () {
           return {
+            allChecked:false,
             checked: true,
-            num:0,
+           
             arr:[
-                {name:"是个风格的不",price:120,num:0},
-                {name:"问题如同",price:190,num:0},
-                {name:"只需发个",price:150,num:0}
-            ]
+                {id:"1",checked:false,name:"是个风格的不",price:"120",num:1},
+                {id:"2",checked:false,name:"问题如同",price:"190",num:1},
+                {id:"3",checked:false,name:"只需发个",price:"150",num:1}
+            ],
+            val:"",
+            checkval:[],
+            price:0,
+            num:0,
           }
         },
         methods:{
@@ -79,15 +91,40 @@
                     this.arr[i].num--
                 }
                 
+            },
+            handleChecked(item){
+                  //全选
+				if(this.allChecked==false) {
+					for(var i = 0; i < this.arr.length; i++) {
+						var item = this.arr[i];
+						item.checked = true;
+					}
+				} else {  //取消全选
+					for(var i = 0; i < this.arr.length; i++) {
+                        var item = this.arr[i];
+						item.checked = false;
+					}
+				}
+				this.allChecked = !this.allChecked;
+
+
             }
 
         },
-        mounted() {
-            // $("#list>li").on("click",function(){
-            //     var index = $(this).index()
-            //     console.log(index)
-            // })
-        },
+        computed:{
+            //计算总价
+         pricetotale: function() {
+            var tatol = 0;
+            for(var i = 0; i < this.arr.length; i++) {
+                var item = this.arr[i];
+                if(item.checked==true){
+                    tatol += Number(item.price) * item.num
+                }
+            }
+            //千位分隔符正则
+            return tatol.toString().replace(/\B(?=(\d{3})+$)/g, ',')
+        }
+        }
       }
       </script>
       
@@ -110,7 +147,7 @@
       
       /* #list li .zuo1{width: 60px;height: 60px;} */
       #list li .zuo{width: 30%;height: 100%;background: red}
-      #list li .zuo img{width: 20%;height: 100%;}
+      #list li .zuo img{width: 100%;height: 100%;}
 
       #list li .you{width: 60%;height: 100%;display: flex;justify-content: space-between}
       #list li .you>div:nth-of-type(1){width: 70%;height: 90%;font-family: "微软雅黑"}
@@ -123,9 +160,10 @@
       
       
       
-      
-      
-      
+      #jiesuan{width: 100%;height: 50px;margin-top: 10px;display: flex;justify-content: space-around;align-items: center}
+      #jiesuan .money{width: 50%;height: 50px;text-align: center;line-height: 50px;font-size: 20px;font-weight: bold}
+      #jiesuan .btn{width: 30%;height: 40px;background: orangered;text-align: center;line-height: 40px;font-size: 20px;font-weight: bold;border-radius: 20px;box-shadow: 0 2px 5px gray;color: #fff}
+      #jiesuan .money span{color: orangered}
       
       
       
