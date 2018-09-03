@@ -16,7 +16,7 @@
                             <p>配送费：￥3</p>
                             <div class="jia">
                                     <i class="el-icon-remove" @click="jian(i)"></i>
-                                     <span class="num">0</span>
+                                     <span class="num">{{item.num}}</span>
                                     <i class="el-icon-circle-plus" @click="jia(i)"></i>
                             </div>
                         </div>
@@ -51,9 +51,9 @@
             checked: true,
             num:0,
             arr:[
-                {name:"是个风格的不",price:120},
-                {name:"问题如同",price:190},
-                {name:"只需发个",price:150}
+                {name:"是个风格的不",price:120,num:0},
+                {name:"问题如同",price:190,num:0},
+                {name:"只需发个",price:150,num:0}
             ]
           }
         },
@@ -66,17 +66,18 @@
                     
             },
             jia(i){
-                var a = $(this).eq(i).prev().text();
-                console.log(a++)
-				a++;
-                
+               
+                this.arr[i].num++
                 
                
             },
             jian(i){
-                var num = Number($(".num").text())
-                console.log(num)
-                // $("#list>li .num").eq(i).text(num) 
+                
+                if (this.arr[i].num<1){
+                    this.arr[i].num=0
+                }else{
+                    this.arr[i].num--
+                }
                 
             }
 

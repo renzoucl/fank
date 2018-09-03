@@ -1,14 +1,14 @@
 <template>
 	<div id="search">
 		<header>
+	      <div><p><span class="iconfont icon-203"></span></p></div>
 	      <div>{{str}}</div>
-	    </header>
-		<div >
-			<mt-search
-			  :v-model="value"
-			  :cancel-text="canceltext"
-			  :placeholder="placeHolder">
-			</mt-search>
+	      <div><!--<p><span class="iconfont icon-sousuo"></span></p>--></div>  
+	    </header>  
+		<div class="searchkuang">
+			<span class="iconfont icon-sousuo"></span>
+			<input type="text" placeholder="搜索"/>
+			<button>确定</button>
 		</div>
 		<div>
 			<div >
@@ -60,18 +60,32 @@
 </script>
 
 <style scoped>
-	header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: center;}
+	header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between;overflow: hidden;}
+	header>div{height:45px;width: 100px;}
+	header>div:nth-of-type(1){text-align: left;padding-left: 5px;font-size: 16px;display: flex;align-items: center;text-align: center;line-height: 28px;}
 	
-	.mint-search {height: 100%;overflow: hidden;}
-	#search>div:nth-of-type(1){height: 52px;}
+	header>div:nth-of-type(1) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-left: 5px;text-align: center;line-height: 28px;}
+	header>div:nth-of-type(1) span{font-size: 22px;color: #fff;display: block;}
+	
+	header>div:nth-of-type(3){text-align: right;padding-right: 5px;display: flex;align-items: center;justify-content: flex-end;text-align: center;line-height: 28px;}
+	header>div:nth-of-type(3) span{font-size: 22px;color: #fff}
+	header>div:nth-of-type(3) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-right: 5px}
+	
+
+	#search>div:nth-of-type(1){background: #C2C2C0;padding: 10px 5px;display: flex;justify-content: flex-start;align-items: center;}
+	.searchkuang>span{width: 30px ;height: 30px;font-size: 24px;display: block;text-align: center;line-height: 30px;}
+	.searchkuang>input{height: 20px;padding: 5px 10px;font-size: 16px;width: 65%;outline: none;border: 0;opacity: 0.8;margin-right: 5px;color: blue;}
+	.searchkuang>button{padding:5px 12px;font-size: 14px;background:#999999;outline: none;border-radius: 5px;color: white;}
 	#search>div:nth-of-type(2){padding: 5px; }
+	
+	#search>div:nth-of-type(2)>div:nth-of-type(1)>h2>span{font-size:24px ;margin-right: 10px;}
 	#search>div:nth-of-type(2)>div:nth-of-type(1)>span{width: 18px;height: 20px;display:block;}
-	#search>div:nth-of-type(2)>div:nth-of-type(1){display: flex;justify-content: space-between;height:32px;margin-bottom: 5px;}
+	#search>div:nth-of-type(2)>div:nth-of-type(1){display: flex;justify-content: space-between;height:32px;margin-bottom: 10px;}
 	#search>div:nth-of-type(2)>div:nth-of-type(1)>div{height:100%;text-align: center;}
 	#search>div:nth-of-type(2)>div:nth-of-type(1)>div>img{display:inline-block;vertical-align: middle;}
 	#search>div:nth-of-type(2)>div:nth-of-type(1)>div>span{height: 100%;vertical-align: middle;display: inline-block;}
 	#search>div:nth-of-type(2)>div:nth-of-type(2){display: flex;flex-wrap: wrap;justify-content:center;}
-	#search>div:nth-of-type(2)>div:nth-of-type(2)>div{margin: 3px;}
+	#search>div:nth-of-type(2)>div:nth-of-type(2)>div{margin: 10px 5px;}
 	#search>div:nth-of-type(2)>div:nth-of-type(3){display: flex;flex-wrap: wrap;justify-content:space-around;height: 75px;margin-top: 20px;}
 	#search>div:nth-of-type(2)>div:nth-of-type(3)>div{width: 33.3%;height:75px ;display:flex ;flex-direction:column ;text-align: center;color: #999;}
 	#search>div:nth-of-type(2)>div:nth-of-type(3)>div>span{font-size: 32px;}
