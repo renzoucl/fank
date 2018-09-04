@@ -1,12 +1,12 @@
 <template>
 	<div id="search">
 		<header>
-	      <div><p><span class="iconfont icon-203"></span></p></div>
+	      <div><p><a class="iconfont icon-203" href="javascript:history.go(-1)"></a></p></div>
 	      <div>{{str}}</div>
 	      <div><!--<p><span class="iconfont icon-sousuo"></span></p>--></div>  
 	    </header>  
 		<div class="searchkuang">
-			<span class="iconfont icon-sousuo"></span>
+			<a class="iconfont icon-sousuo" ></a>
 			<input type="text" placeholder="搜索"/>
 			<button>确定</button>
 		</div>
@@ -65,7 +65,7 @@
 	header>div:nth-of-type(1){text-align: left;padding-left: 5px;font-size: 16px;display: flex;align-items: center;text-align: center;line-height: 28px;}
 	
 	header>div:nth-of-type(1) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-left: 5px;text-align: center;line-height: 28px;}
-	header>div:nth-of-type(1) span{font-size: 22px;color: #fff;display: block;}
+	header>div:nth-of-type(1) a{font-size: 22px;color: #fff;display: block;color: white;}
 	
 	header>div:nth-of-type(3){text-align: right;padding-right: 5px;display: flex;align-items: center;justify-content: flex-end;text-align: center;line-height: 28px;}
 	header>div:nth-of-type(3) span{font-size: 22px;color: #fff}

@@ -36,59 +36,17 @@
             <div id="daren">
                         
               <ul class="list">
-                <li>
+                <li v-for='item in arr'>
                   <div class="tu">
-                      <img src="static/222.jpg" alt="">
+                      <img :src="item.pimg" alt="">
                   </div>
-                  <p>QQ帝国</p>
+                  <p>{{item.pname}}</p>
                   
                   <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
                 </li>
-                <li>
-                    <div class="tu">
-                        <img src="static/222.jpg" alt="">
-                    </div>
-                    <p>QQ帝国</p>
-                    
-                    <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                  </li>
-                  <li>
-                      <div class="tu">
-                          <img src="static/222.jpg" alt="">
-                      </div>
-                      <p>QQ帝国</p>
-                      
-                      <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                    </li>
-                  
+                
               </ul>
-              <ul class="list">
-                  <li>
-                      <div class="tu">
-                          <img src="static/222.jpg" alt="">
-                      </div>
-                      <p>QQ帝国</p>
-                      
-                      <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                    </li>
-                    <li>
-                        <div class="tu">
-                            <img src="static/222.jpg" alt="">
-                        </div>
-                        <p>QQ帝国</p>
-                        
-                        <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                      </li>
-                      <li>
-                          <div class="tu">
-                              <img src="static/222.jpg" alt="">
-                          </div>
-                          <p>QQ帝国</p>
-                          
-                          <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                        </li>
-                  
-                </ul>
+              
           
           </div>
 
@@ -116,59 +74,17 @@
            <div id="daren">
                         
             <ul class="list">
-              <li>
+              <li v-for='item in arr'>
                 <div class="tu">
-                    <img src="static/222.jpg" alt="">
+                    <img :src="item.pimg" alt="">
                 </div>
-                <p>QQ帝国</p>
+                <p>{{item.pname}}</p>
                 
                 <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
               </li>
-              <li>
-                  <div class="tu">
-                      <img src="static/222.jpg" alt="">
-                  </div>
-                  <p>QQ帝国</p>
-                  
-                  <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                </li>
-                <li>
-                    <div class="tu">
-                        <img src="static/222.jpg" alt="">
-                    </div>
-                    <p>QQ帝国</p>
-                    
-                    <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                  </li>
-                
+             
             </ul>
-            <ul class="list">
-                <li>
-                    <div class="tu">
-                        <img src="static/222.jpg" alt="">
-                    </div>
-                    <p>QQ帝国</p>
-                    
-                    <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                  </li>
-                  <li>
-                      <div class="tu">
-                          <img src="static/222.jpg" alt="">
-                      </div>
-                      <p>QQ帝国</p>
-                      
-                      <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                    </li>
-                    <li>
-                        <div class="tu">
-                            <img src="static/222.jpg" alt="">
-                        </div>
-                        <p>QQ帝国</p>
-                        
-                        <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                      </li>
-                
-                   </ul>
+          
         
               </div>
 
@@ -209,12 +125,16 @@
   </template>
   
   <script>
+  	
+  	import axios from 'axios'
+  	
   export default {
     name: 'Ying',
     data(){
       return {
         str:"营养师",
-        msg: ""
+        msg: "",
+        arr:[]
       }
     },
     methods:{
@@ -233,6 +153,7 @@
        }
     },
     mounted() {
+    	var _this=this
       this.$emit("toparent",this.str)
       var box=document.getElementById("box");
 			
@@ -247,6 +168,12 @@
 
 				
 			},1000)
+		axios({
+				url:'http://jx.xuzhixiang.top/ap/api/productlist.php'
+			}).then(function(data){
+				console.log(data.data.data)
+				_this.arr=data.data.data
+			})
     },
   }
   </script>
@@ -338,7 +265,7 @@ div.content1>div:nth-of-type(4) {
 #daren li{border: 1px solid gray}
 #daren li .tu{width: 100%;height: 90px;border-radius: 50%;padding: 0 15px;box-sizing: border-box}
 #daren li .tu img{width: 100%;height: 90px;border-radius: 50%}
-#daren li p:nth-of-type(1){width: 100%;height: 20px;color: #000;margin-top: 3px;text-align: center;line-height: 20px;}
+#daren li p:nth-of-type(1){width: 100%;height: 20px;color: #000;margin-top: 3px;text-align: center;line-height: 20px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 #daren li p:nth-of-type(2){width: 100%;height: 20px;margin-top: 5px;color: #000;text-align: center;line-height: 20px;}
 #daren li p:nth-of-type(2) span{color: red;margin-right: 5px}
 

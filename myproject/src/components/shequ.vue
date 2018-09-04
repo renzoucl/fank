@@ -441,7 +441,7 @@ div.content1>div:nth-of-type(4) {
 
     #shequcon{min-height: 200px;height: auto!important;} 
     #shequcon ul{width:100%;height: 100px;display: flex;justify-content: space-around;margin-top: 10px;flex-wrap:wrap;}
-    #shequcon ul li{width: 45%;height: 100px;border-radius: 10px;display: flex;justify-content: space-between;margin-bottom: 10px;}
+    #shequcon ul li{width: 48%;height: 100px;border-radius: 10px;display: flex;justify-content: space-between;margin-bottom: 10px;}
     #shequcon ul li .zuo{width: 35%;height: 100px;border-radius: 10px;box-shadow: 0 0 5px gray;box-sizing: border-box}
     #shequcon ul li .zuo>div{margin-top: 5px;width:100%;height: 60px;border-radius: 50%}
     #shequcon ul li .zuo>div img{width: 100%;height: 60px;border-radius: 10px;border-radius: 50%}
