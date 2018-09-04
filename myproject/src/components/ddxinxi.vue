@@ -1,7 +1,7 @@
 <template>
     <div id="ddxinxi">
         <header>
-	      <div><p @click="todian()"><span class="iconfont icon-203"></span></p></div>
+	      <div><p @click="tomine()"><span class="iconfont icon-203"></span></p></div>
 	      <div>{{str}}</div>
 	      <div><!--<p><span class="iconfont icon-sousuo"></span></p>--></div>  
 	    </header>  
@@ -186,9 +186,9 @@
 	    btn_qx(){
 	   	this.isShow=false
 	   },
-	   todian(){
+	   tomine(){
 		   console.log("aaa")
-		   this.$router.push("/dian")
+		   this.$router.push("/mine")
 	   },
 	   jia(e,a){
 //	   		console.log(e.target)

@@ -15,59 +15,19 @@
             <div id="daren">
                 
                     <ul class="list">
-                      <li>
+                      <li v-for='item in arr'>
                         <div class="tu">
-                            <img src="static/222.jpg" alt="">
+                            <img :src="item.pimg" alt="">
                         </div>
-                        <p>QQ帝国</p>
+                        <p>{{item.pname}}</p>
                         
                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
                       </li>
-                      <li>
-                          <div class="tu">
-                              <img src="static/222.jpg" alt="">
-                          </div>
-                          <p>QQ帝国</p>
-                          
-                          <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                        </li>
-                        <li>
-                            <div class="tu">
-                                <img src="static/222.jpg" alt="">
-                            </div>
-                            <p>QQ帝国</p>
-                            
-                            <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                          </li>
+                     
+                       
                         
                     </ul>
-                    <ul class="list">
-                        <li>
-                            <div class="tu">
-                                <img src="static/222.jpg" alt="">
-                            </div>
-                            <p>QQ帝国</p>
-                            
-                            <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                          </li>
-                          <li>
-                              <div class="tu">
-                                  <img src="static/222.jpg" alt="">
-                              </div>
-                              <p>QQ帝国</p>
-                              
-                              <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                            </li>
-                            <li>
-                                <div class="tu">
-                                    <img src="static/222.jpg" alt="">
-                                </div>
-                                <p>QQ帝国</p>
-                                
-                                <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
-                              </li>
-                        
-                      </ul>
+                   
                  
             </div>
             <div class="biaoti">
@@ -78,37 +38,15 @@
             <div id="tuijian">
                 
                     <ul class="list">
-                      <li>
+                      <li v-for='item in arr'>
                          <div class="tu">
-                           <img src="static/baozi.jpg" alt="">
+                           <img :src="item.pimg" alt="">
                          </div>
-                          <p>包子阿发帝国电饭锅爱对方是个发的</p>
+                          <p>{{item.pname}}</p>
                           <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
-                      </li>
-                      <li> 2 </li>
-                       
+                      </li>    
                     </ul>
-                    <ul class="list">
-                        <li>
-                            <div class="tu">
-                              <img src="static/baozi.jpg" alt="">
-                            </div>
-                             <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
-                         </li>
-                        <li> 2 </li>  
-                    </ul>
-                    <ul class="list">
-                        <li>
-                            <div class="tu">
-                              <img src="static/baozi.jpg" alt="">
-                            </div>
-                             <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                             <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
-                         </li>
-                        <li> 2</li>  
-                    </ul>
-                 
+   
            </div>
            <div class="biaoti">
               <p><span class="iconfont icon-shouye1"></span>温馨早餐</p>
@@ -118,44 +56,20 @@
            <div id="zaocan">
               
               <ul class="list">
-                  <li>
+                  <li v-for='item in arr'>
                      <div class="tu">
-                       <img src="static/shi.jpg" alt="">
+                       <img :src="item.pimg" alt="">
                      </div>
                       <p>包子阿发帝国电饭锅爱对方是个发的</p>
                       <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
                   </li>
-                  <li> 2 </li>
-                   
+
                 </ul>
-                <ul class="list">
-                    <li>
-                        <div class="tu">
-                          <img src="static/shi.jpg" alt="">
-                        </div>
-                         <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
-                     </li>
-                    <li> 2 </li>  
-                </ul>
-                <ul class="list">
-                    <li>
-                        <div class="tu">
-                          <img src="static/shi.jpg" alt="">
-                        </div>
-                         <p>包子阿发帝国电饭锅爱对方是个发的</p>
-                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
-                     </li>
-                    <li> 2</li>  
-                </ul>
-                 
+          
            </div>
      
 
         </div>
-
-    
-
 
 
 
@@ -183,54 +97,22 @@
           </div>
           <div id="shequcon">
                <ul>
-                   <li>
+               	<li v-for='item in arr'>
                         <div class="zuo">
-                           <div><img src="static/shi.jpg" alt=""></div>
-                           <p>晒美食</p>
+                           <div><img :src='item.pimg' alt=""></div>
+                           <p>{{item.pname}}</p>
                         </div>
                         <div class="you">
-                             <p>爱的方式的后果福建经济和的规范化个看见好看了的十分感动合法化</p>
+                             <p>{{item.pdesc}}</p>
                              <p>帖子数：<span>66666</span></p>
                              <p>☆☆☆☆☆</p>
                         </div>
                    </li>
-                   <li>
-                      <div class="zuo">
-                         <div><img src="static/shi.jpg" alt=""></div>
-                         <p>晒美食</p>
-                      </div>
-                      <div class="you">
-                           <p>爱的方式的后果福建经济和的规范化个看见好看了的十分感动合法化</p>
-                           <p>帖子数：<span>66666</span></p>
-                           <p>☆☆☆☆☆</p>
-                      </div>
+    
                  </li>
                </ul>
 
-               <ul>
-                  <li>
-                       <div class="zuo">
-                          <div><img src="static/shi.jpg" alt=""></div>
-                          <p>晒美食</p>
-                       </div>
-                       <div class="you">
-                            <p>爱的方式的后果福建经济和的规范化个看见好看了的十分感动合法化</p>
-                            <p>帖子数：<span>66666</span></p>
-                            <p>☆☆☆☆☆</p>
-                       </div>
-                  </li>
-                  <li>
-                     <div class="zuo">
-                        <div><img src="static/shi.jpg" alt=""></div>
-                        <p>晒美食</p>
-                     </div>
-                     <div class="you">
-                          <p>爱的方式的后果福建经济和的规范化个看见好看了的十分感动合法化</p>
-                          <p>帖子数：<span>66666</span></p>
-                          <p>☆☆☆☆☆</p>
-                     </div>
-                </li>
-              </ul>
+              
           </div>
 
 
@@ -239,18 +121,16 @@
         <!-- 第三个 -->
         <div style="display: none;">
             <ul id="pinglun">
-                 <li>
-                     <h3>哎菠萝的小猫</h3>
+                 <li v-for='item in arr'>
+                     <h3>{{item.pname}}</h3>
                      <p><span class="iconfont icon-dizhi"></span>海底捞.太原店<span>13:55</span></p>
-                     <div>时代的的规范化个就好空间来看反对法国和加快法规和法国进口了</div>
+                     <div>{{item.pdesc}}</div>
                      <ul class="pingtu">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><img :src="item.pimg" alt=""></li>
+                        <li><img :src="item.pimg" alt=""></li>
+                        <li><img :src="item.pimg" alt=""></li>
                      </ul>
-                     <div class="touxiang"><img src="static/222.jpg" alt=""></div>
+                     <div class="touxiang"><img :src="item.pimg" alt=""></div>
                      <div class="xiaoxi">
                         <span class="iconfont icon-yanjing">  666</span>
                         <span class="iconfont icon-xinxi">  888</span>
@@ -263,13 +143,11 @@
                     </ul> -->
                  </li>
                 
-                 <li>
+                 <!--<li>
                     <h3>哎菠萝的小猫</h3>
                     <p><span class="iconfont icon-dizhi"></span>海底捞.太原店<span>13:55</span></p>
                     <div>时代的的规范化个就好空间来看反对法国和加快法规和法国进口了</div>
                     <ul class="pingtu">
-                       <li></li>
-                       <li></li>
                        <li></li>
                        <li></li>
                        <li></li>
@@ -285,7 +163,7 @@
                        <li><span>哈哈哈</span>这家海底捞怎么样啊？</li>
                        
                    </ul> -->
-                </li>
+               
             </ul>
 
         </div>
@@ -299,12 +177,15 @@
   </template>
   
   <script>
+  	import axios from 'axios'
+  	
   export default {
     name: 'Shequ',
     data(){
       return {
         str:"社区",
-        msg: ""
+        msg: "",
+        arr:[]
       }
     },
    
@@ -323,6 +204,7 @@
        }
     },
     mounted() {
+    	var _this=this
       this.$emit("toparent",this.str)
       var box=document.getElementById("box");
 			
@@ -337,6 +219,13 @@
 
 				
 			},1000)
+			
+			axios({
+				url:'http://jx.xuzhixiang.top/ap/api/productlist.php'
+			}).then(function(data){
+				console.log(data.data.data)
+				_this.arr=data.data.data
+			})
     },
   }
   </script>
@@ -344,7 +233,7 @@
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
     #shequ{padding: 0 5px}
-    #leader{width: 100%;height: 40px;display: flex;justify-content: space-between;position: fixed;top:45px;left: 0;z-index: 9999;}
+    #leader{width: 100%;height: 40px;display: flex;justify-content: space-between;position: fixed;top:43px;left: 0;z-index: 9999;}
     #leader>div{width: 33.33%;height:40px;background: #fff;border-bottom-left-radius:10px;border-bottom-right-radius:10px;box-shadow: 0px 0px 5px #888888;text-align: center;line-height: 40px;font-weight: bold}
     #leader>div span{color: #fb5a5b;margin-right: 5px;font-weight: bold}
 
@@ -356,7 +245,7 @@
       .biaoti p:nth-of-type(2){width:80px;border-radius: 20px;height:30px;text-align: center;line-height: 30px;font-weight: bold;background: #fdd90a;color: #fff;}
       .toubiao{color: #fff;font-size: 14px;line-height: 30px;text-align: center;height: 30px;background: #fe6815;margin-top: 5px;border-top-left-radius: 8px;border-top-right-radius: 8px; }
   .content1{width: 100%;height: 100vh;margin-top: 45px;position: relative;}
-  .content1>div{position: absolute;top: 0px;left: 0;width: 100%;height: 100vh;}   
+  .content1>div{position: relative;top: 0px;left: 0;width: 100%;height: 100vh;}   
 /* div.content1>div:nth-of-type(1) {
 	background:wheat;
 }
@@ -386,7 +275,7 @@ div.content1>div:nth-of-type(4) {
 	position:relative;
 	top:0px;
 	left:0px;
-	width:100%;
+	/*width:100%;*/
 	height:100%;
 	
 	list-style:none;
@@ -420,7 +309,7 @@ div.content1>div:nth-of-type(4) {
 #daren li{border: 1px solid gray}
 #daren li .tu{width: 100%;height: 90px;border-radius: 50%;padding: 0 15px;box-sizing: border-box}
 #daren li .tu img{width: 100%;height: 90px;border-radius: 50%}
-#daren li p:nth-of-type(1){width: 100%;height: 20px;color: #000;margin-top: 3px;text-align: center;line-height: 20px;}
+#daren li p:nth-of-type(1){width: 100%;height: 20px;color: #000;margin-top: 3px;text-align: center;line-height: 20px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 #daren li p:nth-of-type(2){width: 100%;height: 20px;margin-top: 5px;color: #000;text-align: center;line-height: 20px;}
 #daren li p:nth-of-type(2) span{color: red;margin-right: 5px}
 
@@ -442,7 +331,7 @@ div.content1>div:nth-of-type(4) {
 	position:relative;
 	top:0px;
 	left:0px;
-	width:100%;
+	/*width:100%;*/
 	height:100%;
 	
 	list-style:none;
@@ -476,9 +365,9 @@ div.content1>div:nth-of-type(4) {
     }
 
 #tuijian{margin-top: 5px}
-#tuijian li .tu{width:100%;height: 90px;border-radius: 10px;background: red}
-#tuijian li .tu img{height: 90px;width:100%;border-radius: 10px}
-#tuijian li p{width: 100%;height: 15px;text-align: center;line-height: 15px;font-size: 12px;color: #696969;box-sizing: border-box}
+#tuijian li .tu{width:100%;height: 90px;border-radius: 20px;background: red}
+#tuijian li .tu img{height: 90px;width:100%;border-radius: 22px}
+#tuijian li p{width: 100%;height: 15px;text-align: center;line-height: 15px;font-size: 12px;color: #696969;box-sizing: border-box;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 #tuijian li p:nth-of-type(1){width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin: 5px 0}
   
   /* 第3个 */
@@ -497,7 +386,7 @@ div.content1>div:nth-of-type(4) {
 	position:relative;
 	top:0px;
 	left:0px;
-	width:100%;
+	/*width:100%;*/
 	height:100%;
 	
 	list-style:none;
@@ -531,9 +420,9 @@ div.content1>div:nth-of-type(4) {
     }  
     
 #zaocan{margin-top: 5px}
-#zaocan li .tu{width:100%;height: 90px;border-radius: 10px;background: red}
-#zaocan li .tu img{height: 90px;width:100%;border-radius: 10px}
-#zaocan li p{width: 100%;height: 15px;text-align: center;line-height: 15px;font-size: 12px;color: #696969;box-sizing: border-box}
+#zaocan li .tu{width:100%;height: 80px;border-radius: 10px;background: red}
+#zaocan li .tu img{height: 80px;width:100%;border-radius: 20px}
+#zaocan li p{width: 100%;height: 15px;text-align: center;line-height: 15px;font-size: 12px;color: #696969;box-sizing: border-box;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 #zaocan li p:nth-of-type(1){width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin: 5px 0}
 
 
@@ -551,16 +440,16 @@ div.content1>div:nth-of-type(4) {
 		#box>div:nth-of-type(3){transform: rotateX(-20deg) translatez(70px);opacity: 1;width: 100%} 
 
     #shequcon{min-height: 200px;height: auto!important;} 
-    #shequcon ul{width: 100%;;height: 100px;display: flex;justify-content: space-between;margin-top: 10px}
-    #shequcon ul li{width: 48.5%;height: 100px;border-radius: 10px;display: flex;justify-content: space-between;}
+    #shequcon ul{width:100%;height: 100px;display: flex;justify-content: space-around;margin-top: 10px;flex-wrap:wrap;}
+    #shequcon ul li{width: 45%;height: 100px;border-radius: 10px;display: flex;justify-content: space-between;margin-bottom: 10px;}
     #shequcon ul li .zuo{width: 35%;height: 100px;border-radius: 10px;box-shadow: 0 0 5px gray;box-sizing: border-box}
     #shequcon ul li .zuo>div{margin-top: 5px;width:100%;height: 60px;border-radius: 50%}
     #shequcon ul li .zuo>div img{width: 100%;height: 60px;border-radius: 10px;border-radius: 50%}
-    #shequcon ul li .zuo p{margin-top: 10px;width: 100%;height: 20px;text-align: center;line-height: 20px;font-weight: bold;font-size: 14px}
+    #shequcon ul li .zuo p{margin-top: 10px;width: 100%;height: 20px;text-align: center;line-height: 20px;font-weight: bold;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
     #shequcon ul li .you{width: 64%;height: 100px;border-radius: 10px;padding: 5px;box-sizing: border-box;box-shadow: 0 0 5px gray}
-    #shequcon ul li .you p:nth-of-type(1){width: 100%;height: 35px;font-size: 12px;overflow: hidden;color: gray}
-    #shequcon ul li .you p:nth-of-type(2){width: 100%;height: 20px;font-size: 12px;margin: 8px 0;color: fuchsia}
-    #shequcon ul li .you p:nth-of-type(3){width: 100%;height: 20px;font-size: 12px;color: orange}
+    #shequcon ul li .you p:nth-of-type(1){width: 100%;height: 35px;font-size: 12px;overflow: hidden;color: gray;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    #shequcon ul li .you p:nth-of-type(2){width: 100%;height: 20px;font-size: 12px;margin: 8px 0;color: fuchsia;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    #shequcon ul li .you p:nth-of-type(3){width: 100%;height: 20px;font-size: 12px;color: orange;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 
 /* 第三页 */
 #pinglun{min-height: 205px;height: auto!important;}
@@ -569,11 +458,11 @@ div.content1>div:nth-of-type(4) {
 #pinglun>li p{font-size: 16px;color: gray}
 #pinglun>li p span{color: orange;margin: 0 5px}
 #pinglun>li>div{min-height: 20px;height: auto!important;font-size: 16px;font-weight: bold;color: #555;margin: 10px 0}
-#pinglun>li .pingtu{display: flex;justify-content: space-between;margin-top: 10px;}
+#pinglun>li .pingtu{display: flex;justify-content: space-between;margin-top: 10px;flex-wrap:wrap ;}
 
 
-#pinglun>li .pingtu li{width: 100px;height: 50px;border: 1px solid red;margin: 0;padding: 0;border-radius: 5px;margin-right: 2px}
-#pinglun>li .pingtu li img{width: 100px;height: 50px;}
+#pinglun>li .pingtu li{width: 80px;height: 50px;/*border: 1px solid red;*/margin: 0;padding: 0;border-radius: 5px;margin-right: 2px}
+#pinglun>li .pingtu li img{width: 80px;height: 50px;}
 
 #pinglun>li .touxiang{width: 60px;height: 80px;border: 1px solid #000;box-shadow: 0 2px 10px gray;border-radius: 50%;position:absolute;top: -5px;left: -5px}
 #pinglun>li .touxiang img{width: 60px;height: 60px;border-radius: 50%}

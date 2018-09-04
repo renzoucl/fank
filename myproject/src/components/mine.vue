@@ -35,14 +35,16 @@
          </ul>
 
        <ul id="list2">
-          <li>
-            <div>
+       	<router-link to='/ddxinxi' tag='li'>
+       		<div>
+            	
                 <span class="iconfont icon-qicheqianlian-"></span>  订单
             </div>
             <div>
                 <p>3</p><span class="iconfont icon-houtuimian"></span>
             </div>
-          </li>
+       	</router-link>
+          
           <li>
               <div> 
                   <span class="iconfont icon-meishi"></span>  我的菜谱

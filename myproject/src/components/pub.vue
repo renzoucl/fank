@@ -60,7 +60,7 @@
      height: 100vh;display: flex;flex-direction: column;
   }
   
-  header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between}
+  header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between;overflow: hidden;}
   header>div{height:45px;width: 100px;}
   header>div:nth-of-type(1){text-align: left;padding-left: 10px;font-size: 16px}
   header>div:nth-of-type(1) span{font-size: 18px;margin-right: 5px}
@@ -69,13 +69,13 @@
   header>div:nth-of-type(3) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-right: 5px}
   
   
-  footer{height: 50px;background: #272727;color: #fff;text-align: center;line-height: 50px;display: flex;justify-content: space-around;font-size:20px}
-  section{flex: 1;overflow: auto}
+ 
+  section{flex: 1;overflow: auto;}
   
   .shou{height:50px;width:60px;display: flex;justify-content: center;flex-direction: column;align-items: center;}
   .shou{font-size: 13px}
-  .shou span{font-size: 25px;height: 20px;margin-bottom: 3px}
+  .shou span{font-size: 25px;height: 20px;margin-bottom: 3px;}
   
-  
+   footer{height: 50px;background: #272727;color: #fff;text-align: center;line-height: 50px;display: flex;justify-content: space-around;font-size:20px;overflow: hidden;}
   </style>
   
