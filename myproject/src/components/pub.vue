@@ -70,7 +70,7 @@
   
   
  
-  section{flex: 1;overflow: auto;}
+  section{flex: 1;overflow: auto;overflow-x: hidden}
   
   .shou{height:50px;width:60px;display: flex;justify-content: center;flex-direction: column;align-items: center;}
   .shou{font-size: 13px}

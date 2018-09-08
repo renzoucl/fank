@@ -1,44 +1,43 @@
 <template>
     <div id="home">
        
-          <mt-swipe :auto="4000"  id="lunbo" style="box-shadow: 0px 5px 10px #888888;">
-            <mt-swipe-item style="background: red" class="img"><img src="static/1.jpg" alt=""></mt-swipe-item>
-            <mt-swipe-item style="background: green" class="img"><img src="static/2.jpg" alt=""></mt-swipe-item>
-            <mt-swipe-item style="background: orange" class="img"><img src="static/3.jpg" alt=""></mt-swipe-item>
+          <mt-swipe :auto="4000"  id="lunbo" style="box-shadow: 0px 5px 10px #888888;" >
+          	  <mt-swipe-item style="background: green" class="img" v-for="(item,i) in arr3">
+          	  	<router-link :to="'/fooddetail/'+item.pid" >
+             		<img :src="item.pimg" alt="">
+            	</router-link>
+            </mt-swipe-item>
           </mt-swipe>
        
-          <div class="biaoti">
+          <div class="biaoti" >
              <p><span class="iconfont icon-shouye1"></span>美食店铺</p>
              <p>MORE+</p>
           </div>
           <div class="toubiao">------好店好铺美食多 . 缤纷美味更多精彩-------</div>
       <!-- 美食 -->
           <div id="meishi">
-              <div class="mei">
+              <div class="mei" v-for="(item,i) in arr2" >
+              	<router-link :to="'/fooddetail/'+item.pid" >
                   <div class="shang">
-                    <img src="static/4.jpg">
+                    <img :src="item.pimg">
                   </div>
                   <div class="sun">
-                    <span>阳光咖啡</span>
+                    <span>{{item.pname}}</span>
                     <span class="iconfont icon-xin"></span>
                     <span>255</span>
                   </div>
                   <div class="xia">
-                     <p><img src="static/8.jpg"><span class="iconfont icon-re"></span></span></p>
+                     <p><img :src="item.pimg"><span class="iconfont icon-re"></span></span></p>
                      <div class="yan">
                        <p><span class="yan iconfont icon-yanjing"  > </span> <span>88</span></p>
                        <p><span class=" iconfont icon-qicheqianlian-"  ></span> <span>66</span></p>
                      </div>
                   </div>
+                  </router-link>
               </div>
+              
 
-              <div class="mei">
-                 
-              </div>
-
-              <div class="mei">
-
-              </div>
+              
           </div>
         <!-- 店铺活动 -->
           <div id="huodong" >
@@ -50,10 +49,14 @@
    
           </div>
           <!-- 前后轮播 -->
-          <div id="box">
-			
-             <div id="box1" class="card">
-                 
+          <div id="box" >
+			<!--<div v-for='(item,i) in arr3'>-->
+				<router-link :to="'/fooddetail/'+item.pid" tag='div'  class="card" v-for='(item,i) in arr3' :id="'box'+(i+1)" >
+                	<img :src="item.pimg"/>
+                </router-link>
+			<!--</div>-->
+             <!--<div id="box1" class="card" >
+             	
               </div>
               
               <div id="box2" class="card">
@@ -62,7 +65,7 @@
               
               <div id="box3" class="card">
                 
-              </div>
+              </div>-->
               
           </div> 
            
@@ -77,17 +80,13 @@
          <div id="zuoyou">
             <div class="wrap">
                 <ul class="list">
-                  <li><img src="static/shi.jpg"></li>
-                  <li><img src="static/shi.jpg"> </li>
-                  <li><img src="static/shi.jpg"></li>
-                    
+                  <li v-for='item in arr'>	
+                  	<router-link :to="'/fooddetail/'+item.pid">
+                  		<img :src="item.pimg">
+                  	</router-link>
+                  </li>
+ 
                 </ul>
-                <ul class="list">
-                    <li><img src="static/shi.jpg"></li>
-                    <li><img src="static/shi.jpg"> </li>
-                    <li><img src="static/shi.jpg"></li>
-                   
-                  </ul>
               </div>
          </div>
          <div class="guanggao">
@@ -131,7 +130,11 @@
       return {
         str:"首页",
         msg: "",
-        touimg:require("../../static/222.jpg")
+        touimg:require("../../static/222.jpg"),
+        arr:[],
+        arr1:[],
+        arr2:[],
+        arr3:[]
 
       }
     }
@@ -160,6 +163,11 @@
 			.then(function(data){
 			//	console.log(data.data.data)
 				_this.arr=data.data.data
+				
+				_this.arr1=_this.arr.slice(0,3),
+//				console.log(_this.arr1),
+        		_this.arr2=_this.arr.slice(3,6),
+        		_this.arr3=_this.arr.slice(6,9)
 			})
 
 
@@ -189,14 +197,14 @@
       .biaoti p:nth-of-type(2){width:80px;border-radius: 20px;height:30px;text-align: center;line-height: 30px;font-weight: bold;background: #fdd90a;color: #fff;}
       .toubiao{color: #fff;font-size: 14px;line-height: 30px;text-align: center;height: 30px;background: #fe6815;margin-top: 5px;border-top-left-radius: 8px;border-top-right-radius: 8px; }
     
-      #meishi{height: 200px;;margin-top:10px;border-radius: 10px;display: flex;justify-content: space-between;}
-      #meishi .mei{height: 200px;width: 32%;;border-radius: 10px;border: 1px solid gray;box-shadow: 0px 5px 10px #ddd;}
+      #meishi{height: 205px;;margin-top:10px;border-radius: 10px;display: flex;justify-content: space-between;overflow: hidden;}
+      #meishi .mei{height: 200px;width: 32%;;border-radius: 10px;border: 1px solid gray;box-shadow: 0px 5px 10px #ddd;overflow: hidden;}
       #meishi .mei .shang{height:100px;border-top-left-radius:10px;border-top-right-radius:10px;}
       #meishi .mei .shang img{height:100px;border-top-left-radius:10px;border-top-right-radius:10px;width: 100%}
       #meishi .mei .sun{height:25px;font-size: 14px;font-weight: bold;color: #696969;padding-left:5px;border-bottom: 1px solid gray;line-height: 25px;display: flex;justify-content: space-between}
-      #meishi .mei .sun span:nth-of-type(1){font-size: 12px;font-weight: bold;}
+      #meishi .mei .sun span:nth-of-type(1){font-size: 12px;font-weight: bold;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
       #meishi .mei .sun span:nth-of-type(2):hover{color: red;font-size: 12px}
-      #meishi .mei .xia{height: 60px;margin-top: 5px;display: flex;justify-content: space-between}
+      #meishi .mei .xia{height: 60px;margin-top: 5px;display: flex;justify-content: space-between;overflow: hidden;}
       #meishi .mei .xia>p{width: 49%;height: 60px;position: relative}
       #meishi .mei .xia>p img{width: 100%;height: 60px}
       #meishi .mei .xia>p span{position: absolute;top: 0;right: 0;font-size: 24px;color: red}
@@ -207,16 +215,17 @@
       #meishi .mei .xia .yan p:nth-of-type(2) span:nth-of-type(1){color:#f95f64;font-weight: bold;margin-left: 5px}
       #meishi .mei .xia .yan p:nth-of-type(1) span:nth-of-type(2){font-size: 12px;margin-top: 5px}
       #meishi .mei .xia .yan p:nth-of-type(2) span:nth-of-type(2){font-size: 12px}
-     #huodong{margin-top: 20px}
+     #huodong{margin-top: 10px}
      #daren{margin-top:40px}
      #zhuanjia{margin-top: 20px}
    /* 前后轮播 */
     #box{height: 200px;position: relative;}
   	#box>div{height: 100%;width: 100%;text-align: center;position: absolute;transition: all 1s;}
-    #box>div img{height: 100%;width: 100%;border-radius: 10px;}
+    #box>div img{height: 95%;width: 100%;border-radius: 20px;}
 
     #box span{font-size: 60px;font-weight: bold;}
 		#box1{background:url('../../static/110.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
+		
 		#box2{background:url('../../static/111.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
 		#box3{background:url('../../static/112.jpg') no-repeat center/cover;border-radius: 10px;box-shadow: 0px 5px 10px #ddd;}
 		#box>div:nth-of-type(1){transform: rotateX(-20deg) translatez(0) translatex(15%);opacity: 0.1;width: 70%;}
