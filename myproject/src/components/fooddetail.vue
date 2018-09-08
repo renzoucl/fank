@@ -64,7 +64,7 @@
 			    	
 					<div class="buy fr">
 							<div @click="tolist()">
-								<span >{{num}}</span>
+								<span >{{num-1}}</span>
 						        查看购物车
 							</div>
 							<div @click="tojiesuan()">
@@ -91,20 +91,33 @@
         data () {
             return{
 				detail:[],
-				num:""
+				num:1
 			}
 		},
 		methods:{
            tolist(){
+			   
 			   this.$router.push("/gouwuche")
 		   },
 		   tojiesuan(){
                
 		   },
-		   jiajian(){
-			//    console.log("ddd")
-              Number(this.num++)
-		   }
+		   jiajian(){//添加购物车
+			   
+			   var num = Number(this.num++)
+				var _this=this;
+				axios({
+					url:"http://jx.xuzhixiang.top/ap/api/add-product.php/",
+					params:{uid:111,pid:_this.$route.params.id,pnum:num}
+				})
+				.then(function(data){
+				
+					console.log( data.data)
+				})
+
+              
+		   },
+		   
 		},
         mounted(){
            console.log(this.$route.params.id)//接收id值

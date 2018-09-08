@@ -69,7 +69,7 @@
   header>div:nth-of-type(3) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-right: 5px}
   
   
-  footer{height: 50px;background: #272727;color: #fff;text-align: center;line-height: 50px;display: flex;justify-content: space-around;font-size:20px}
+  footer{height: 50px;background: #272727;color: #fff;text-align: center;line-height: 50px;display: flex;justify-content: space-around;font-size:20px;overflow: hidden}
   section{flex: 1;overflow: auto}
   
   .shou{height:50px;width:60px;display: flex;justify-content: center;flex-direction: column;align-items: center;}

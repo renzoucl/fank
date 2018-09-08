@@ -10,20 +10,20 @@
                         <!-- v-model="checked" -->
                     <!-- <el-checkbox class="zuo1" ></el-checkbox> -->
                     <input type="checkbox" class="ipt" v-model = "item.checked">
-                    <div class="zuo"><img src="static/222.jpg" alt="a"></div>
+                    <div class="zuo"><img :src="item.pimg" alt="a"></div>
                     <div class="you"> 
                         <div>
-                            <div class="name">{{item.name}}</div>
+                            <div class="name">{{item.pname}}</div>
                             <p>配送费：￥3</p>
                             <div class="jia">
                                     <i class="el-icon-remove" @click="jian(i)"></i>
-                                     <span class="num">{{item.num}}</span>
-                                    <i class="el-icon-circle-plus" @click="jia(i)"></i>
+                                    <span class="num">{{item.pnum}}</span>
+                                    <i class="el-icon-circle-plus" @click="jia(i,item)"></i>
                             </div>
                         </div>
                         <div>
-                            <p>{{item.price}}</p>
-                            <i class="el-icon-delete shan" @click="delate(i)"></i>
+                            <p>{{item.pprice}}</p>
+                            <i class="el-icon-delete shan" @click="delate(i,item)"></i>
                         </div>
                     </div>
                 
@@ -48,7 +48,7 @@
       
       <script>
           import $ from 'jquery'
-
+          import axios from "axios"
           import Checkbix from "checkbix"
           Checkbix.init();
       export default {
@@ -58,30 +58,44 @@
             allChecked:false,
             checked: true,
            
-            arr:[
-                {id:"1",checked:false,name:"是个风格的不",price:"120",num:1},
-                {id:"2",checked:false,name:"问题如同",price:"190",num:1},
-                {id:"3",checked:false,name:"只需发个",price:"150",num:1}
-            ],
+            arr:[],
             val:"",
             checkval:[],
             price:0,
-            num:0,
+            // num:0,
           }
         },
         methods:{
             todian(){
-                this.$router.push("/home")
+                this.$router.push("/dian")
             },
-            delate(i){
-                $(".shan").eq(i).parents("li").remove()
-                    
+            //删除
+            delate(i,item){
+                console.log(item.id)
+               // $(".shan").eq(i).parents("li").remove()
+                axios({
+                    url:"http://jx.xuzhixiang.top/ap/api/cart-delete.php",
+                    params:{uid:111,pid:item.id}
+                })
+                .then(function(data){
+                    alert(data.data.msg)
+                    //console.log(data.data)
+                })
+                this.$router.push('/gouwuche');
             },
-            jia(i){
-               
-                this.arr[i].num++
+            jia(i,item){
                 
-               
+                 var num =item.pnum++
+                console.log(num+1,item.id)
+                axios({
+                    url:"http://jx.xuzhixiang.top/ap/api/cart-update-num.php",
+                    params:{uid:111,pid:item.id,pnum:num+1}
+                })
+                .then(function(data){
+                    alert(data.data.msg)
+                    //console.log(data.data)
+                })
+                
             },
             jian(i){
                 
@@ -111,6 +125,34 @@
             }
 
         },
+        mounted() {
+            var that = this;
+            axios({
+				url:"http://jx.xuzhixiang.top/ap/api/cart-list.php",
+				params:{id:111}
+			})
+			.then(function(data){
+                that.arr=data.data.data
+                console.log(that.arr)
+                
+			})
+        },
+        // watch:{
+		// 	'$route'(a){
+		// 		console.log(a.params.id)
+		// 		var _this=this;
+        //         axios({
+		// 		url:"http://jx.xuzhixiang.top/ap/api/cart-list.php",
+		// 		params:{id:111}
+		// 	})
+		// 	.then(function(data){
+        //         that.arr=data.data.data
+        //         //console.log(that.arr)
+                
+		// 	})
+				
+		// 	}
+		// },
         computed:{
             //计算总价
          pricetotale: function() {
@@ -118,7 +160,7 @@
             for(var i = 0; i < this.arr.length; i++) {
                 var item = this.arr[i];
                 if(item.checked==true){
-                    tatol += Number(item.price) * item.num
+                    tatol += Number(item.pprice) * item.pnum
                 }
             }
             //千位分隔符正则
@@ -130,7 +172,7 @@
       
       
       <style scoped>
-      header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between;overflow: hidden;}
+      header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between;overflow: hidden;display: flex}
 	header>div{height:45px;width: 100px;}
 	header>div:nth-of-type(1){text-align: left;padding-left: 5px;font-size: 16px;display: flex;align-items: center;text-align: center;line-height: 28px;}
 	

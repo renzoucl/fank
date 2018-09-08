@@ -136,10 +136,11 @@
       this.$emit("toparent",this.str)
       var _this=this;
 			axios({
-				url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
+         url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
+        //url:"http://addresslist.do"
 			})
 			.then(function(data){
-				//console.log(data.data.data)
+				console.log(data)
         _this.arr=data.data.data
         
 			})
