@@ -42,22 +42,24 @@
                     
                 </div>
                 <div id="repu">
-                    <div class="repucon" @click="xiangqing()">
-                          <div class="zuo">
-                              <img src="static/baozi.jpg">
-
-                          </div>
-                          <div class="you">
-                            <h3>哈哈包子铺<span class="iconfont icon-xin"></span>5612</h3>
-                            <p>包子简洁包子简洁包子简洁包子简洁包子简洁</p>
-                            <p><span>品类多</span> <span>安静</span> <span>环境好</span></p>
-                            <p>
-                              <span class="iconfont icon-dizhi1">大学路航海路往东300m</span>
-                              <span class="iconfont icon-qicheqianlian-">6666</span>
-                              <span class="iconfont icon-qicheqianlian-">8888</span>
-                            </p>
-                          </div>
-                    </div>
+                	<router-link to="/djpuzi_cai">
+	                    <div class="repucon" >
+	                          <div class="zuo">
+	                              <img src="static/baozi.jpg">
+	
+	                          </div>
+	                          <div class="you">
+	                            <h3>哈哈包子铺<span class="iconfont icon-xin"></span>5612</h3>
+	                            <p>包子简洁包子简洁包子简洁包子简洁包子简洁</p>
+	                            <p><span>品类多</span> <span>安静</span> <span>环境好</span></p>
+	                            <p>
+	                              <span class="iconfont icon-dizhi1">大学路航海路往东300m</span>
+	                              <span class="iconfont icon-qicheqianlian-">6666</span>
+	                              <span class="iconfont icon-qicheqianlian-">8888</span>
+	                            </p>
+	                          </div>
+	                    </div>
+                     </router-link >
                 </div>
        
 

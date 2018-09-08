@@ -25,6 +25,7 @@
 </template>
 
 <script>
+	import axios from 'axios'
 	export default{
 		name:"Register",
 		methods:{
@@ -37,6 +38,9 @@
 			next(){
 				this.$router.push("/register2")
 			}
+		},
+		mounted(){
+			
 		}
 	}
 	

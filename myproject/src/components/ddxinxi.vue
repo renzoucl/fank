@@ -111,7 +111,7 @@
         			<div class="xqimg">
         				<img src="static/xj.png"/>
         			</div>
-        			<div class="xqxinx">
+        			<div class="xqxinx" ref='2'>
         				<div>
         					<div class="xqxinx-js">
         						<h3>香煎牛排香煎牛排香煎牛排</h3>
@@ -129,7 +129,7 @@
         					<span :style="{background: colorA}" @click='tap()'>支付订单</span>
         					<span v-show='false'>取消订单</span>
         					<span v-show='false'>催菜</span>
-        					<span class="iconfont icon-shanchu"></span>
+        					<span class="iconfont icon-shanchu" @click='del1()'></span>
         				</div>
         			</div>
         			
@@ -167,7 +167,6 @@
         str:"订单信息",
         colorA:'yellow',
         isShow:false,
-        num:1
       }
     },
     methods:{
@@ -187,33 +186,29 @@
 	   	this.isShow=false
 	   },
 	   tomine(){
-		   console.log("aaa")
+//		   console.log("aaa")
 		   this.$router.push("/mine")
 	   },
 	   jia(e,a){
 //	   		console.log(e.target)
-	   		this.num++
 //	   		console.log(a)
 	   		var oP=document.querySelectorAll(".xqshul p")
 	   		for(let i=0;i<oP.length;i++){
 //	   			console.log(oP[i].getAttribute("id"))
 	   			if(oP[i].getAttribute("id")==a){
 //	   				console.log(oP[i])
-	   				oP[i].innerHTML=this.num
+	   				oP[i].innerHTML++
 	   			}
 	   		}
 	   },
 	   jian(e,a){
-
-	   		this.num--
-		   	if(this.num<1){
-		   		this.num=1
-		   	}
 	   		var oP=document.querySelectorAll(".xqshul p")
 	   		for(let i=0;i<oP.length;i++){
 	   			if(oP[i].getAttribute("id")==a){
-
-	   				oP[i].innerHTML=this.num
+	   				oP[i].innerHTML--
+	   				if(oP[i].innerHTML<=1){
+	   					oP[i].innerHTML=1
+	   				}
 	   			}
 	   		}
 	   }
