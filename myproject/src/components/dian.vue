@@ -137,7 +137,7 @@
       var _this=this;
 			axios({
          url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
-        //url:"http://addresslist.do"
+        //url:"http://10.8.163.36:8080/showlist.do"
 			})
 			.then(function(data){
 				console.log(data)
