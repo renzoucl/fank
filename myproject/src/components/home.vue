@@ -104,7 +104,7 @@
         <div id="yingyang">
            <div class="content">
                 <div class="zuo">
-                    <div class="shang"><img :src="touimg"></div>
+                    <div class="shang"><img src="static/222.jpg"></div>
                     <p>特朗普</p>
                     <p><span class="iconfont icon-dizhi"></span>美国.华盛顿特区.白宫</p>
                 </div>

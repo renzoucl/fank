@@ -41,18 +41,18 @@
                 <span class="iconfont icon-qicheqianlian-"></span>  订单
             </div>
             <div>
-                <p>3</p><span class="iconfont icon-houtuimian"></span>
+                <p></p><span class="iconfont icon-houtuimian"></span>
             </div>
        	</router-link>
           
-          <li>
+          	<router-link to='/gouwuche?id=111' tag='li'>
               <div> 
-                  <span class="iconfont icon-meishi"></span>  我的菜谱
+                  <span class="iconfont icon-meishi"></span>  我的购物车
               </div>
               <div>
-                  <p>5</p><span class="iconfont icon-houtuimian"></span>
+                  <p></p><span class="iconfont icon-houtuimian"></span>
               </div>
-            </li>
+            </router-link>
             <li>
                     <div>
                         <span class="iconfont icon-shiwu"></span> 我的银行卡

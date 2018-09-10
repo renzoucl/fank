@@ -8,8 +8,9 @@
 					</div>
 					<div class="middle">菜品详情</div>
 					<div class="right">
-					<span class="iconfont icon-xin fr"></span>
-							
+					<router-link to='/home' tag='span' class="iconfont icon-shouye">
+					
+					</router-link>
 					</div>
 		  </header>
 		
@@ -35,20 +36,20 @@
 			    <ul style="margin-top:20px;padding: 0 8px">
 					<li id="titel">肯德基</li>
 			    	<li >
-			    		<span >{{detail.pname}}</span><span>（8份）</span>
-			    		<b class="fr">￥24</b>
+			    		<span >{{detail.pname}}</span><!--<span>（8份）</span>-->
+			    		<!--<b class="fr">￥24</b>-->
 			    	</li>
 			    	<li >
-							<span >{{detail.pdesc}}</span><span>（8份）</span>
-							<b class="fr">￥24</b>
+							<span >{{detail.pdesc}}</span><!--<span>（8份）</span>-->
+							<!--<b class="fr">￥24</b>-->
 					</li>
 			    	<li >
-							<span >{{detail.pid}}</span><span>（8份）</span>
-							<b class="fr">￥24</b>
+							<span >{{detail.pid}}</span><!--<span>（8份）</span>-->
+							<!--<b class="fr">￥24</b>-->
 					</li>
 			    	<li >
-							<span >{{detail.pprice}}</span><span>（8份）</span>
-							<b class="fr">￥24</b>
+							<span >￥{{detail.pprice}}</span><!--<span>（8份）</span>-->
+							<!--<b class="fr">￥24</b>-->
 					</li>
 					<div @click="jiajian()" id="jiaru">
 							+ 加入购物车
@@ -64,7 +65,7 @@
 			    	
 					<div class="buy fr">
 							<div @click="tolist()">
-								<span >{{num-1}}</span>
+								<span >{{num}}</span>
 						        查看购物车
 							</div>
 							<div @click="tojiesuan()">
@@ -91,28 +92,28 @@
         data () {
             return{
 				detail:[],
-				num:1
+				num:0
 			}
 		},
 		methods:{
            tolist(){
 			   
-			   this.$router.push("/gouwuche")
+			   this.$router.push("/gouwuche?id=11")
 		   },
 		   tojiesuan(){
                
 		   },
 		   jiajian(){//添加购物车
 			   
-			   var num = Number(this.num++)
+			   this.num++
 				var _this=this;
 				axios({
-					url:"http://jx.xuzhixiang.top/ap/api/add-product.php/",
-					params:{uid:111,pid:_this.$route.params.id,pnum:num}
+					method:'get',
+					url:"http://jx.xuzhixiang.top/ap/api/add-product.php",
+					params:{uid:111,pid:_this.$route.params.id,pnum:1}
 				})
 				.then(function(data){
-				
-					console.log( data.data)
+							
 				})
 
               
@@ -120,7 +121,7 @@
 		   
 		},
         mounted(){
-           console.log(this.$route.params.id)//接收id值
+//         console.log(this.$route.params.id)//接收id值
 			var _this=this;
         
 			axios({
@@ -129,8 +130,9 @@
 			})
 			.then(function(data){
                 _this.detail=data.data.data
-                console.log(_this.detail)
+//              console.log(_this.detail)
 			})
+			
  
 		}
 

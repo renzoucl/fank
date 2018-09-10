@@ -223,7 +223,7 @@
 			axios({
 				url:'http://jx.xuzhixiang.top/ap/api/productlist.php'
 			}).then(function(data){
-				console.log(data.data.data)
+//				console.log(data.data.data)
 				_this.arr=data.data.data
 			})
     },

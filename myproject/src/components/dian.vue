@@ -17,7 +17,7 @@
                 </div>
 
                 <div id="yingyang">
-                    <div class="content" v-for="(item,i) in arr">
+                    <div class="content" v-for="(item,i) in arr1">
                         
                         <div class="zuo">
                             <div class="shang">
@@ -117,6 +117,7 @@
         str:"店家",
         msg: "",
         arr:[],
+        arr1:[]
        
       }
     },
@@ -138,13 +139,13 @@
       this.$emit("toparent",this.str)
       var _this=this;
 			axios({
-         url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
-        //url:"http://10.8.163.36:8080/showlist.do"
+				url:"http://jx.xuzhixiang.top/ap/api/productlist.php"
 			})
 			.then(function(data){
-				console.log(data)
-        _this.arr=data.data.data
-        
+			//	console.log(data.data.data)
+				_this.arr=data.data.data
+				_this.arr1=_this.arr.slice(3,6)
+
 			})
     },
   }
