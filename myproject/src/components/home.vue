@@ -181,7 +181,7 @@
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
     *{margin: 0;padding: 0;font-family: "微软雅黑"}
-      #home{padding:0 8px}
+      #home{padding:0 8px;overflow: hidden;}
       #lunbo{
          height: 150px;
          border-radius: 10px;

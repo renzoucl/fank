@@ -22,7 +22,7 @@
 		name:"Lr",
 		methods:{
 			register(){
-				this.$router.push("/register")
+				this.$router.push("/register2")
 			},
 			login(){
 				this.$router.push("/login")

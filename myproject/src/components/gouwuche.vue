@@ -6,10 +6,10 @@
                 <div><router-link to='/home' tag=p><span class="iconfont icon-shouye"></span></router-link></div>  
             </header>  
             <ul id="list">
-                <li v-for="(item,i) in arr">
+                <li v-for="(item,i) in arr" ref="boxd">
                         <!-- v-model="checked" -->
                     <!-- <el-checkbox class="zuo1" ></el-checkbox> -->
-                    <div id="box" :ref="item.pid" v-if='isshow'>
+                    <div id="box"  >
                     	<input type="checkbox" class="ipt" v-model = "item.checked">
 	                    <div class="zuo"><img :src="item.pimg" alt="a"></div>
 	                    <div class="you"> 
@@ -74,19 +74,22 @@
             //删除
             delate(i,id){
             	var _this = this;
+//          	this.isshow=false
+            	console.log(this.$refs.boxd[i])
             	
-            	console.log(this.$refs[id])
-            	this.isshow=false
-
+//          	this.$refs.boxd
                 axios({
                 	method:"get",
                     url:"http://jx.xuzhixiang.top/ap/api/cart-delete.php",
                     params:{uid:111,pid:id}
                 })
                 .then(function(data){
-//                  alert(data.data.msg)
-//                  _this.$router.push("/gouwuche?id=111")
+                    alert(data.data.msg)
                    
+					_this.$refs.boxd[i].style.display='none';
+	            	 _this.$router.push("/gouwuche?id=111")
+
+	            
                 })
                 
             },
@@ -102,6 +105,7 @@
                 .then(function(data){
 //                  alert(data.data.msg)
 //                    console.log(data.data)
+   				_this.$router.push("/gouwuche?id=111")
                
 
                     
@@ -123,7 +127,7 @@
                 .then(function(data){
 //                  alert(data.data.msg)
                     //console.log(data.data)
-//                  _this.$router.push("/gouwuche?id=111")
+                    _this.$router.push("/gouwuche?id=111")
                    
                 })
             },
@@ -158,19 +162,25 @@
                 
 			})
         },
-
+//      updated(){
+//      	if(this.isshow==false){
+//      		this.isshow=true
+//      	}
+//      },
         watch:{
+
 		 	'$route'(a){
 //		 		console.log(a.query.id)
 		 		var _this=this;
-		 		 _this.isshow=true;
+//      		_this.isshow=true;
+		 		
                 axios({
 			 		url:"http://jx.xuzhixiang.top/ap/api/cart-list.php",
 			 		params:{id:111}
 		 		})
 		 		.then(function(data){
                   _this.arr=data.data.data
-                 
+                  
    			})
 		 	}
 		},
@@ -194,6 +204,7 @@
       
       
       <style scoped>
+      	#gouwuche{height: 100vh;display: flex;flex-direction: column;}
       header{height:45px;background:#222222;color:#fff;text-align: center;line-height: 45px;font-size:20px;display: flex;justify-content: space-between;overflow: hidden;display: flex}
 	header>div{height:45px;width: 100px;}
 	header>div:nth-of-type(1){text-align: left;padding-left: 5px;font-size: 16px;display: flex;align-items: center;text-align: center;line-height: 28px;}
@@ -206,7 +217,7 @@
 	header>div:nth-of-type(3) p{width: 28px;height: 28px;background: #fddb13;border-radius: 50%;margin-right: 5px}
       
       
-      #list{min-height: 200px;height: auto!important;padding: 10px}
+      #list{min-height: 200px;height: auto!important;padding: 10px ;flex: 1;overflow: auto;}
       #list li{height: 110px;width: 100%;}
       #box{height: 110px;width: 100%;margin-top: 10px;display: flex;justify-content: space-between;align-items: center;padding: 5px;box-sizing: border-box;box-shadow: 0 0 5px #ccc;}
       /* #list li .zuo1{width: 60px;height: 60px;} */

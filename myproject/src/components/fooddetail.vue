@@ -98,7 +98,7 @@
 		methods:{
            tolist(){
 			   
-			   this.$router.push("/gouwuche?id=11")
+			   this.$router.push("/gouwuche?id=111")
 		   },
 		   tojiesuan(){
                
