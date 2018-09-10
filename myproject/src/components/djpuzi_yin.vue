@@ -1,9 +1,9 @@
 <template>
     <div id="djpuzi">
         <header>
-	      <div><p><span class="iconfont icon-203"></span></p></div>
+	      <div><a href="javascript:history.go(-1)"><p><span class="iconfont icon-203"></span></p></a></div>
 	      <div>{{str}}</div>
-	      <div><p><span class="iconfont icon-sousuo"></span></p></div>  
+	      <div><p><span class="iconfont icon-sousuo" @click="sousuo()"></span></p></div>  
 	    </header>  
         <section>
 	    	<div class="s-top">
@@ -143,7 +143,10 @@
     methods:{
 	    getdata(msg){
 	      this.tit=msg
-	    }
+	    },
+	    sousuo(){
+        this.$router.push("/search")
+      }
 	  },
     mounted() {
       this.$emit("toparent",this.str)

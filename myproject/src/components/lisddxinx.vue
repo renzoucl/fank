@@ -1,7 +1,7 @@
 <template>
     <div id="ddxinxi">
         <header>
-	      <div><p @click="todian()"><span class="iconfont icon-203"></span></p></div>
+	      <div><p @click="tomine()"><span class="iconfont icon-203"></span></p></div>
 	      <div>{{str}}</div>
 	      <div><!--<p><span class="iconfont icon-sousuo"></span></p>--></div>  
 	    </header>  
@@ -81,9 +81,9 @@
 	    getdata(msg){
 	      this.tit=msg
 			},
-		todian(){
-		   console.log("aaa")
-		   this.$router.push("/dian")
+		tomine(){
+//		   console.log("aaa")
+		   this.$router.push("/mine")
 	   }
 	  },
     mounted() {
