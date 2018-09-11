@@ -15,7 +15,7 @@
 		  	<button @click="tap()" class="btn">跳过</button>
 		  </mt-swipe-item>
 		  <mt-swipe-item class="sjskf">
-		  	<!--<img src="static/r.jpg" />-->
+		  	<img src="static/r.jpg" />
 		  	<button @click="tap1()" id="btn">立即体验</button>
 		  </mt-swipe-item>
 		</mt-swipe>
