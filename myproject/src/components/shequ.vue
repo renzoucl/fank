@@ -15,13 +15,17 @@
             <div id="daren">
                 
                     <ul class="list">
-                      <li v-for='item in arr'>
+                    	<li v-for='item in arr'>
+                    		
+                    	
+                      <router-link   :to="'/fooddetail/'+item.pid"  >
                         <div class="tu">
                             <img :src="item.pimg" alt="">
                         </div>
                         <p>{{item.pname}}</p>
                         
                         <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
+                        </router-link>
                       </li>
                      
                        
@@ -39,11 +43,13 @@
                 
                     <ul class="list">
                       <li v-for='item in arr'>
+                      	<router-link   :to="'/fooddetail/'+item.pid"  >
                          <div class="tu">
                            <img :src="item.pimg" alt="">
                          </div>
                           <p>{{item.pname}}</p>
                           <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
+                          </router-link>
                       </li>    
                     </ul>
    
@@ -57,11 +63,13 @@
               
               <ul class="list">
                   <li v-for='item in arr'>
+                  	<router-link   :to="'/fooddetail/'+item.pid"  >
                      <div class="tu">
                        <img :src="item.pimg" alt="">
                      </div>
                       <p>包子阿发帝国电饭锅爱对方是个发的</p>
                       <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万   <span class="iconfont icon-daren"></span>点赞<span>16</span>万</p>
+                      </router-link>
                   </li>
 
                 </ul>
@@ -98,6 +106,10 @@
           <div id="shequcon">
                <ul>
                	<li v-for='item in arr'>
+               		
+               	
+               	
+               		
                         <div class="zuo">
                            <div><img :src='item.pimg' alt=""></div>
                            <p>{{item.pname}}</p>
@@ -107,7 +119,7 @@
                              <p>帖子数：<span>66666</span></p>
                              <p>☆☆☆☆☆</p>
                         </div>
-                   </li>
+                       
     
                  </li>
                </ul>
@@ -122,6 +134,7 @@
         <div style="display: none;">
             <ul id="pinglun">
                  <li v-for='item in arr'>
+                 	
                      <h3>{{item.pname}}</h3>
                      <p><span class="iconfont icon-dizhi"></span>海底捞.太原店<span>13:55</span></p>
                      <div>{{item.pdesc}}</div>
@@ -275,7 +288,7 @@ div.content1>div:nth-of-type(4) {
 	position:relative;
 	top:0px;
 	left:0px;
-	/*width:100%;*/
+	width:100%;
 	height:100%;
 	
 	list-style:none;
@@ -298,10 +311,10 @@ div.content1>div:nth-of-type(4) {
   border-radius: 10%
 }
     @-webkit-keyframes mymove {
-      from {
+      0% {
           left:0px;
         }
-        to {
+        100% {
           left:-100%;
         }
     }
@@ -374,7 +387,7 @@ div.content1>div:nth-of-type(4) {
   #zaocan{
 	overflow:hidden;
 	width:100%;
-	height:120px;
+	height:140px;
 	
   display: flex;
   justify-content: space-between;

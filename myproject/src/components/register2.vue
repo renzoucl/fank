@@ -5,7 +5,7 @@
 			<button @click="login()" id="dl">登录</button>
 		</div>
 		
-		<p class="hy">w e l c o m e t o f a n k e</p>
+		<p class="hy">w e l c o m e t o f a n k a</p>
 		
 		<div id="box1">
 			<div class="getyzm">
@@ -115,7 +115,7 @@
 						dataType:"json",
 						params:{username:username,password:pass}
 					}).then(function(data){
-						console.log(data.data)
+//						console.log(data.data)
 						if(data.data.code==1){
 							localStorage.setItem("next",_this.phone)
 							_this.$router.push("/home")
@@ -148,14 +148,14 @@
 	#box{
 		height:100vh;
 		width: 100vw;
-		background:url(/static/body.jpg);
+		background:url(../../static/body.jpg);
 		overflow: hidden;
 	}
 	#box1{
 		height:350px;
 		width:300px;
-		background:url(/static/reg2.jpg);
-		margin:20% auto 0;
+		background:url(../../static/reg2.jpg);
+		margin:30% auto 0;
 		overflow: hidden;
 	}
 	#return{

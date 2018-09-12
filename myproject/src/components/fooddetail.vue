@@ -2,9 +2,9 @@
 	<div id="fooddetail">
 			<header>
 					<div class="left">
-						<router-link to='/dian'>
+						<a href="javascript:history.go(-1)">
 							<span class="iconfont icon-arrow_left_f"></span>								
-						</router-link>
+						</a>
 					</div>
 					<div class="middle">菜品详情</div>
 					<div class="right">

@@ -1,17 +1,17 @@
 <template>
 	<div id="box">
 		<div id="box1">
-			<img src="/static/maozi.jpg" />
-			<span>w e l c o m e t o f a n k e</span>
+			<img src="static/maozi.jpg" />
+			<span>w e l c o m e t o f a n k a</span>
 			<div class="lr">
 				<button @click="login()" class="login">登录</button>
 				<button @click="register()" class="reg">注册</button>
 			</div>	
 			<p>其他登录方式</p>
 			<ul>
-				<li><a class="iconfont icon-qq"></a></li>
-				<li><a class="iconfont icon-weixin"></a></li>
-				<li><a class="iconfont icon-weibo"></a></li>
+				<li><a class="iconfont icon-dianhua"></a></li>
+				<li><a class="iconfont icon-pengyou"></a></li>
+				<li><a class="iconfont icon-gengduo"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 	#box{
 		height:100%;
 		width:100%;
-		background:url(/static/body.jpg);
+		background:url(../../static/body.jpg);
 		
 	}
 	#box1{
@@ -88,17 +88,19 @@
 		width:30px;
 		height:30px;
 		border-radius: 15px;
-		background: #FFDC14;
+		/*background: #FFDC14;*/
 		text-align: center;
 		line-height: 30px;
 		background: #FFDC14;
 		/*margin-right:30px;*/
+		overflow: hidden;
 		
 	}
+	
 	a{
 		color:#FFFFFF;
 	}
-	img{
+	 img:nth-child(1){
 		margin:100px auto;		
 	}
 	span{

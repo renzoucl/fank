@@ -37,12 +37,14 @@
                         
               <ul class="list">
                 <li v-for='item in arr'>
+                	<router-link   :to="'/fooddetail/'+item.pid"  >
                   <div class="tu">
                       <img :src="item.pimg" alt="">
                   </div>
                   <p>{{item.pname}}</p>
                   
                   <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
+                  </router-link    >
                 </li>
                 
               </ul>
@@ -75,12 +77,14 @@
                         
             <ul class="list">
               <li v-for='item in arr'>
+              	<router-link   :to="'/fooddetail/'+item.pid"  >
                 <div class="tu">
                     <img :src="item.pimg" alt="">
                 </div>
                 <p>{{item.pname}}</p>
                 
                 <p><span class="iconfont icon-xin"></span>粉丝<span>16</span>万</p>
+                </router-link     >
               </li>
              
             </ul>
@@ -171,7 +175,7 @@
 		axios({
 				url:'http://jx.xuzhixiang.top/ap/api/productlist.php'
 			}).then(function(data){
-				console.log(data.data.data)
+//				console.log(data.data.data)
 				_this.arr=data.data.data
 			})
     },

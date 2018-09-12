@@ -10,7 +10,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 import Checkbix from "checkbix"
-
+import store from "./store/store"
 
 import 'mint-ui/lib/style.css'
 //import "./js/jquery.js"
@@ -26,6 +26,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

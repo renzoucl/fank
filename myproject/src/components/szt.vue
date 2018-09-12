@@ -63,7 +63,7 @@
 	.top{
 		height:120px;
 		width:100%;
-		background: url(/static/szt.jpg) ;
+		background: url(../../static/szt.jpg) ;
 		background-position-y: -50px;
 		background-size: cover;
 	}

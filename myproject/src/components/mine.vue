@@ -4,11 +4,11 @@
              <div class="set"><span class="iconfont icon-shezhi2"></span></div>
              <div class="head">
                 <div><span class="iconfont icon-xiugaiqianming"></span></div>
-                <div><img src="static/222.jpg"></div>
+                <div @click="duih()"><img src="static/222.jpg"></div>
                 <div><span class="iconfont icon-shezhi1"></span></div>
              </div>
              <div class="sign">
-                  <div>QQ帝国</div>
+                  <div>{{username}}</div>
                   <p>宇宙大开发无限责任公司</p>
              </div>
              <div class="qiandao">
@@ -53,6 +53,22 @@
                   <p></p><span class="iconfont icon-houtuimian"></span>
               </div>
             </router-link>
+              <li @click="tap()">
+              <div> 
+                  <span class="iconfont icon-meishi"></span>  我的菜谱
+              </div>
+              <div>
+                  <p>5</p><span class="iconfont icon-houtuimian"></span>
+              </div>
+            </li>
+            <li @click="tap2()">
+                <div>
+                    <span class="iconfont icon-xinxi"></span>  消息通知
+                </div>
+                <div>
+                    <p>0</p><span class="iconfont icon-houtuimian"></span>
+                </div>
+              </li>
             <li>
                     <div>
                         <span class="iconfont icon-shiwu"></span> 我的银行卡
@@ -95,6 +111,22 @@
     mounted() {
       this.$emit("toparent",this.str)
     },
+     methods:{
+    	tap(){
+    		this.$router.push("/taocan")
+    	},
+    	tap2(){
+    		this.$router.push("/yingyangs")
+    	},
+    	duih(){
+    		this.$router.push("/chat")
+    	}
+    },
+       computed:{
+    	username(){
+				return localStorage.getItem("next")
+			}
+    }
   }
   </script>
   

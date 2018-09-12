@@ -49,7 +49,8 @@
 		line-height: 30px;
 		position: absolute;
 		bottom: 50px;
-		left:140px;
+		left:35%;
+		/*margin:-100px auto;*/
 		
 		background: #FFFFFF;
 		
@@ -61,6 +62,7 @@
 		position:fixed;
 		top:20px;
 		right:20px;
+		/*margin:20px auto;*/
 		border-radius: 20px;
 		background: #FFFFFF;
 		text-align: center;
@@ -73,7 +75,7 @@
 	}
 	.sjskf{
 		height:100%;width:100%;
-		background: url(/static/r.jpg);
+		background: url(../../static/r.jpg);
 		background-size: cover;
 		background-position: center center;
 	}

@@ -75,7 +75,7 @@
             delate(i,id){
             	var _this = this;
 //          	this.isshow=false
-            	console.log(this.$refs.boxd[i])
+//          	console.log(this.$refs.boxd[i])
             	
 //          	this.$refs.boxd
                 axios({

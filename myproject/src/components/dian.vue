@@ -174,7 +174,7 @@
    
     #yingyang .you{width: 65%;border-top-right-radius: 10px;border-bottom-right-radius: 10px;padding-top: 5px;padding-left: 15px;border-left: 1px solid #b5b3b3}
     #yingyang .you  h3{font-size: 16px;font-weight: bold;height: 20px;overflow: hidden;font-family: "微软雅黑"}
-    #yingyang .you p:nth-of-type(1){width: 100%;height: 40px;;margin-top: 10px;padding-right:15px;overflow: hidden;font-size:12px;color: gray;}
+    #yingyang .you p:nth-of-type(1){width: 100%;height: 34px;;margin-top: 10px;padding-right:15px;overflow: hidden;font-size:12px;color: gray;}
     #yingyang .you p:nth-of-type(2){width: 100%;height: 30px;;margin-top: 5px;padding-right:5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:30px}
     #yingyang .you p:nth-of-type(3){width: 100%;height: 25px;;margin-top: 5px;color: #3d3c3c;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size:14px;line-height:25px}
     #yingyang .you p:nth-of-type(2) span{color: #72cc8f;font-size: 26px}

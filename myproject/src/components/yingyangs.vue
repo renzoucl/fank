@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header>
-			<span class="iconfont icon-203"></span>
+			<span class="iconfont icon-203" @click="back()"></span>
       		<div>{{str}}</div>
       		 <span id="ss"  class="iconfont icon-sousuo"></span>
 		</header>
@@ -34,6 +34,11 @@
 			return{
 				str:"营养师",
 				value:""
+			}
+		},
+		methods:{
+			back(){
+				this.$router.push("/mine")
 			}
 		}
 	}

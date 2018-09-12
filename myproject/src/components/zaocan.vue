@@ -2,9 +2,9 @@
 	<div class="main">
 		<div class="top">
 			<header>
-			 <span class="iconfont icon-203"></span>
+			 <span @click="tap()"  class="iconfont icon-203"></span>
 		      <div>{{str}}</div>
-		     <span id="ss"  class="iconfont icon-sousuo"></span>	
+		     <span class=" gd iconfont icon-sousuo"></span>	
 			</header>
 		</div>	
 		<div id="detail">
@@ -54,6 +54,11 @@
 			return{
 				str:"美味早餐券"
 			}
+		},
+		methods:{
+			tap(){
+				this.$router.push("/taocan")
+			}
 		}
 	}
 </script>
@@ -65,24 +70,23 @@
 	.top{
 		height:120px;
 		width:100%;
-		background: url(/static/lmjc.jpg) ;
+		background: url(../../static/lmjc.jpg) ;
 		background-position-y: -90px;
 	}
 	header{
-		background: none;
-		/*position: fixed;
-		top:0;*/
+		position:fixed;top:0;height:45px;width:100%;display: flex;justify-content:space-between;
 	}
-	header div{
-		font-weight: 600;
+	header span{
+		height:25px;width:25px;background: #FFDC14;border-radius: 12px;margin-top:10px;text-align: center;line-height: 25px;color:#FFFFFF;
 	}
 	header span:nth-child(1){
-		height:24px;width:24px;background: #FFDC14;text-align: center;line-height: 24px;
-		border-radius: 12px;margin-top:10px;margin-left:10px;
+		margin-left:10px;
 	}
-	#ss{
-		height:24px;width:24px;background: #FFDC14;text-align: center;line-height: 24px;
-		border-radius: 12px;margin-top:10px;margin-right:10px;
+	.gd{
+		margin-right:10px;
+	}
+	header div{
+		color:#FFFFFF;line-height: 45px;
 	}
 	#detail{
 		height:50px;width:90%;border:2px solid #E8E6E6;border-radius: 25px;

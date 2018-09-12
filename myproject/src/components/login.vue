@@ -4,7 +4,7 @@
 			<button @click="back()" id="return">&lt;</button>
 			<button @click="login()" id="dl">注册</button>
 		</div>
-			<p class="hy">w e l c o m e t o f a n k e</p>
+			<p class="hy">w e l c o m e t o f a n k a</p>
 		
 		<div id="box1">
 			<div class="getyzm">
@@ -59,7 +59,7 @@
 				this.$router.push("/lr")
 			},
 			login(){
-				this.$router.push("/register")
+				this.$router.push("/register2")
 			},
 			sc2(){
 				this.pass=""
@@ -101,7 +101,7 @@
 							dataType:"json",
 							params:{username:username,password:pass}
 						}).then(function(data){
-							console.log(data.data)
+//							console.log(data.data)
 							if(data.data.code==1){
 								localStorage.setItem("next",_this.phone)
 								_this.$router.push("/home")
@@ -124,14 +124,14 @@
 	#box{
 		height:100ch;
 		width: 100vw;
-		background:url(/static/body.jpg);
+		background:url(../../static/body.jpg);
 		background-size: cover;
 		overflow: hidden;
 	}
 	#box1{
 		height:292px;
 		width:300px;
-		background:url(/static/reg1.jpg);
+		background:url(../../static/reg1.jpg);
 		margin:20% auto 0;
 		overflow: hidden;
 	}
